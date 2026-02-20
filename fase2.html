@@ -1,10 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Fase 2</title>
+    <title>Personaliza tu Buzo</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Bienvenido a la Fase 2</h1>
+
+<h1>Personaliza tu Buzo</h1>
+
+<h2>1. Elige el modelo</h2>
+<select id="modelo">
+    <option value="Oversize">Oversize</option>
+    <option value="Hoodie">Hoodie</option>
+    <option value="Crewneck">Crewneck</option>
+</select>
+
+<h2>2. Elige el color</h2>
+<select id="color">
+    <option value="Negro">Negro</option>
+    <option value="Blanco">Blanco</option>
+    <option value="Beige">Beige</option>
+    <option value="Gris">Gris</option>
+</select>
+
+<br><br>
+
+<button onclick="enviarPedido()" class="btn">
+    🚀 Enviar mi pedido por WhatsApp
+</button>
+
+<script>
+function enviarPedido() {
+    var modelo = document.getElementById("modelo").value;
+    var color = document.getElementById("color").value;
+
+    var mensaje = "Hola, quiero un buzo personalizado.%0A"
+                + "Modelo: " + modelo + "%0A"
+                + "Color: " + color;
+
+    window.location.href = "https://wa.me/573053471863?text=" + mensaje;
+}
+</script>
+
 </body>
 </html>
