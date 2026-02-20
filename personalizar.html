@@ -1,48 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Nickily - Personaliza</title>
+    <title>Nickily - Personaliza tu Buzo</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;900&display=swap" rel="stylesheet">
 </head>
 
-<body class="personalizar-body">
+<body class="home-body">
 
-<h1 class="titulo">Nickily</h1>
-<p class="frase">Diseña tu identidad</p>
+<section class="personalizar-hero">
 
-<img id="imagenProducto" src="buzo-negro.jpg" class="producto-img">
+    <h1 class="marca">Dale forma a tu estilo</h1>
+    <p class="frase-impacto">Elige tu talla y color</p>
 
-<div class="bloque">
-    <label>Talla</label>
-    <select id="talla">
-        <option value="S">S</option>
-        <option value="M">M</option>
-        <option value="L">L</option>
-    </select>
-</div>
+    <img id="imagenProducto" src="buzo-negro.jpg" class="producto-img">
 
-<div class="bloque">
-    <label>Color</label>
-    <select id="color" onchange="cambiarImagen()">
-        <option value="negro">Negro</option>
-        <option value="blanco">Blanco</option>
-        <option value="rojo">rojo</option>
-        <option value="gris">Gris</option>
-    </select>
-</div>
+    <div class="bloque-personalizar">
+        <label>Talla</label>
+        <select id="talla">
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+        </select>
+    </div>
 
-<p class="precio">$90.000</p>
-<p class="urgencia">Stock limitado esta semana</p>
+    <div class="bloque-personalizar">
+        <label>Color</label>
+        <select id="color" onchange="cambiarImagen()">
+            <option value="negro">Negro</option>
+            <option value="blanco">Blanco</option>
+            <option value="beige">Beige</option>
+            <option value="gris">Gris</option>
+        </select>
+    </div>
 
-<button onclick="enviarPedido()" class="btn-principal">
-    Solicitar pieza
-</button>
+    <p class="precio-home">$90.000</p>
+    <p class="beneficios">Envíos a todo Colombia • Pago contra entrega</p>
 
-<!-- Botón flotante -->
-<button onclick="enviarPedido()" class="btn-flotante">
-    Comprar ahora - $90.000
-</button>
+    <button onclick="enviarPedido()" class="btn-home">
+        Confirmar mi pedido
+    </button>
+
+</section>
 
 <script>
 function cambiarImagen() {
