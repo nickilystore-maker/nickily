@@ -4,35 +4,37 @@
     <title>Nickily - Personaliza</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body style="background:black; color:white; text-align:center; font-family:Arial;">
 
-<h1 style="font-size:40px; margin-top:40px;">Diseña tu Identidad</h1>
+<body class="personalizar-body">
 
-<p style="opacity:0.7; margin-bottom:40px;">
-Cada pieza es única. Tú eliges cómo empieza.
+<h1 class="titulo">Diseña tu Identidad</h1>
+
+<p class="subtitulo">
+Cada pieza es única. No es solo un buzo, es tu versión.
 </p>
 
-<img src="https://via.placeholder.com/300x300"
-     style="width:300px; border-radius:10px; margin-bottom:30px;">
+<img src="TU-IMAGEN-REAL-AQUI.jpg" class="producto-img">
 
-<h2>Talla</h2>
-<select id="talla" class="select">
-    <option value="S">S</option>
-    <option value="M">M</option>
-    <option value="L">L</option>
-</select>
+<div class="selector">
+    <h2>Talla</h2>
+    <select id="talla">
+        <option value="S">S</option>
+        <option value="M">M</option>
+        <option value="L">L</option>
+    </select>
+</div>
 
-<h2 style="margin-top:30px;">Color Base</h2>
-<select id="color" class="select">
-    <option value="Negro">Negro</option>
-    <option value="Blanco">Blanco</option>
-    <option value="Beige">Beige</option>
-    <option value="Gris">Gris</option>
-</select>
+<div class="selector">
+    <h2>Color Base</h2>
+    <select id="color">
+        <option value="Negro">Negro</option>
+        <option value="Blanco">Blanco</option>
+        <option value="Beige">Beige</option>
+        <option value="Gris">Gris</option>
+    </select>
+</div>
 
-<p style="font-size:22px; font-weight:bold; margin-top:40px;">
-$90.000
-</p>
+<p class="precio">$90.000</p>
 
 <button onclick="enviarPedido()" class="btn">
     Personalizar ahora
