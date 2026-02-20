@@ -8,11 +8,13 @@
 
 <h1>Personaliza tu Buzo</h1>
 
-<h2>1. Elige el modelo</h2>
-<select id="modelo">
-    <option value="Oversize">Oversize</option>
-    <option value="Hoodie">Hoodie</option>
-    <option value="Crewneck">Crewneck</option>
+<p>Precio único para todas las tallas</p>
+
+<h2>1. Elige tu talla</h2>
+<select id="talla">
+    <option value="S">S</option>
+    <option value="M">M</option>
+    <option value="L">L</option>
 </select>
 
 <h2>2. Elige el color</h2>
@@ -26,16 +28,16 @@
 <br><br>
 
 <button onclick="enviarPedido()" class="btn">
-    🚀 Enviar mi pedido por WhatsApp
+    🚀 Confirmar mi pedido
 </button>
 
 <script>
 function enviarPedido() {
-    var modelo = document.getElementById("modelo").value;
+    var talla = document.getElementById("talla").value;
     var color = document.getElementById("color").value;
 
-    var mensaje = "Hola, quiero un buzo personalizado.%0A"
-                + "Modelo: " + modelo + "%0A"
+    var mensaje = "Hola, quiero mi buzo personalizado.%0A"
+                + "Talla: " + talla + "%0A"
                 + "Color: " + color;
 
     window.location.href = "https://wa.me/573053471863?text=" + mensaje;
