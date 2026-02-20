@@ -8,7 +8,8 @@
 
 <h1>Personaliza tu Buzo</h1>
 
-<p>Precio único para todas las tallas</p>
+<h2 style="margin-top:10px;">Buzo personalizado</h2>
+<p style="font-size:20px; font-weight:bold;">$90.000</p>
 
 <h2>1. Elige tu talla</h2>
 <select id="talla">
@@ -36,7 +37,7 @@ function enviarPedido() {
     var talla = document.getElementById("talla").value;
     var color = document.getElementById("color").value;
 
-    var mensaje = "Hola, quiero mi buzo personalizado.%0A"
+    var mensaje = "Hola, quiero mi buzo personalizado de $90.000.%0A"
                 + "Talla: " + talla + "%0A"
                 + "Color: " + color;
 
