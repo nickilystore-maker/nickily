@@ -3,20 +3,18 @@
 <head>
     <title>Nickily - Personaliza</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 
 <body class="personalizar-body">
 
-<h1 class="titulo">Diseña tu Identidad</h1>
+<h1 class="titulo">Nickily</h1>
+<p class="frase">Diseña tu identidad</p>
 
-<p class="subtitulo">
-Cada pieza es única. No es solo un buzo, es tu versión.
-</p>
+<img id="imagenProducto" src="buzo-negro.jpg" class="producto-img">
 
-<img src="TU-IMAGEN-REAL-AQUI.jpg" class="producto-img">
-
-<div class="selector">
-    <h2>Talla</h2>
+<div class="bloque">
+    <label>Talla</label>
     <select id="talla">
         <option value="S">S</option>
         <option value="M">M</option>
@@ -24,23 +22,30 @@ Cada pieza es única. No es solo un buzo, es tu versión.
     </select>
 </div>
 
-<div class="selector">
-    <h2>Color Base</h2>
-    <select id="color">
-        <option value="Negro">Negro</option>
-        <option value="Blanco">Blanco</option>
-        <option value="Beige">Beige</option>
-        <option value="Gris">Gris</option>
+<div class="bloque">
+    <label>Color</label>
+    <select id="color" onchange="cambiarImagen()">
+        <option value="negro">Negro</option>
+        <option value="blanco">Blanco</option>
+        <option value="beige">Beige</option>
+        <option value="gris">Gris</option>
     </select>
 </div>
 
 <p class="precio">$90.000</p>
 
 <button onclick="enviarPedido()" class="btn">
-    Personalizar ahora
+    Solicitar pieza
 </button>
 
 <script>
+function cambiarImagen() {
+    var color = document.getElementById("color").value;
+    var imagen = document.getElementById("imagenProducto");
+
+    imagen.src = "buzo-" + color + ".jpg";
+}
+
 function enviarPedido() {
     var talla = document.getElementById("talla").value;
     var color = document.getElementById("color").value;
