@@ -33,16 +33,21 @@
 </div>
 
 <p class="precio">$90.000</p>
+<p class="urgencia">Stock limitado esta semana</p>
 
-<button onclick="enviarPedido()" class="btn">
+<button onclick="enviarPedido()" class="btn-principal">
     Solicitar pieza
+</button>
+
+<!-- Botón flotante -->
+<button onclick="enviarPedido()" class="btn-flotante">
+    Comprar ahora - $90.000
 </button>
 
 <script>
 function cambiarImagen() {
     var color = document.getElementById("color").value;
     var imagen = document.getElementById("imagenProducto");
-
     imagen.src = "buzo-" + color + ".jpg";
 }
 
