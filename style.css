@@ -102,3 +102,7 @@ nav {
 .whatsapp-float:hover {
   transform: scale(1.1);
 }
+.trust {
+  text-align: center;
+  padding: 50px 20px;
+}
