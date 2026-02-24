@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Personalizar - Nickily</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="form-container">
+    <h1>Personaliza tu Buso</h1>
+
+    <select id="talla">
+      <option value="">Selecciona Talla</option>
+      <option>XS</option>
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+
+    <select id="color">
+      <option value="">Selecciona Color</option>
+      <option>Blanco</option>
+      <option>Rosa</option>
+      <option>Café</option>
+      <option>Negro</option>
+      <option>Rojo</option>
+      <option>Azul</option>
+      <option>Verde</option>
+      <option>Amarillo</option>
+      <option>Gris</option>
+      <option>Morado</option>
+    </select>
+
+    <textarea id="anime" placeholder="¿Qué anime o diseño quieres?"></textarea>
+
+    <button onclick="enviar()">Enviar por WhatsApp</button>
+  </div>
+
+  <script>
+    function enviar() {
+      var talla = document.getElementById("talla").value;
+      var color = document.getElementById("color").value;
+      var anime = document.getElementById("anime").value;
+
+      var mensaje = "Hola Nickily, quiero un buzo personalizado.%0A"
+        + "Talla: " + talla + "%0A"
+        + "Color: " + color + "%0A"
+        + "Anime: " + anime;
+
+      window.open("https://wa.me/573053471863?text=" + mensaje);
+    }
+  </script>
+
+</body>
+</html>
