@@ -1,0 +1,56 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #f4f8ff;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background: white;
+}
+
+.btn {
+  background: #0066ff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #0066ff, #00c3ff);
+  color: white;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+  padding: 40px;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.cta {
+  text-align: center;
+  padding: 80px 20px;
+  background: #0066ff;
+  color: white;
+}
+
+.form-container {
+  max-width: 400px;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
