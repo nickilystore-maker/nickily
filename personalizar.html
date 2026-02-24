@@ -1,57 +1,167 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <title>Personalizar - Nickily</title>
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Personalizar | Nickily</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#0d0f14;
+color:white;
+padding:80px 8%;
+}
+
+h2{
+text-align:center;
+margin-bottom:40px;
+}
+
+.container{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+align-items:center;
+}
+
+.product-image img{
+width:100%;
+max-height:500px;
+object-fit:contain;
+}
+
+.form-box{
+background:#151922;
+padding:30px;
+border-radius:15px;
+}
+
+.form-box label{
+display:block;
+margin-top:20px;
+margin-bottom:5px;
+}
+
+.form-box select,
+.form-box textarea{
+width:100%;
+padding:10px;
+border-radius:8px;
+border:none;
+margin-bottom:10px;
+}
+
+.form-box textarea{
+resize:none;
+height:100px;
+}
+
+.btn{
+display:inline-block;
+margin-top:20px;
+padding:12px 25px;
+background:#00e0ff;
+color:black;
+border-radius:8px;
+text-decoration:none;
+font-weight:600;
+cursor:pointer;
+border:none;
+width:100%;
+}
+</style>
 </head>
+
 <body>
 
-  <div class="form-container">
-    <h1>Personaliza tu Buso</h1>
+<h2>Personaliza tu buso</h2>
 
-    <select id="talla">
-      <option value="">Selecciona Talla</option>
-      <option>XS</option>
-      <option>S</option>
-      <option>M</option>
-      <option>L</option>
-      <option>XL</option>
-    </select>
+<div class="container">
 
-    <select id="color">
-      <option value="">Selecciona Color</option>
-      <option>Blanco</option>
-      <option>Rosa</option>
-      <option>Café</option>
-      <option>Negro</option>
-      <option>Rojo</option>
-      <option>Azul</option>
-      <option>Verde</option>
-      <option>Amarillo</option>
-      <option>Gris</option>
-      <option>Morado</option>
-    </select>
+<div class="product-image">
+<img id="imagenProducto" src="">
+</div>
 
-    <textarea id="anime" placeholder="¿Qué anime o diseño quieres?"></textarea>
+<div class="form-box">
 
-    <button onclick="enviar()">Enviar por WhatsApp</button>
-  </div>
+<label>Color</label>
+<select id="colorSelect">
+<option value="blanco">Blanco</option>
+<option value="rosa">Rosa</option>
+<option value="cafe">Café</option>
+<option value="negro">Negro</option>
+<option value="rojo">Rojo</option>
+<option value="azul">Azul</option>
+<option value="verde">Verde</option>
+<option value="amarillo">Amarillo</option>
+<option value="gris">Gris</option>
+<option value="morado">Morado</option>
+</select>
 
-  <script>
-    function enviar() {
-      var talla = document.getElementById("talla").value;
-      var color = document.getElementById("color").value;
-      var anime = document.getElementById("anime").value;
+<label>Talla</label>
+<select id="talla">
+<option value="S">S</option>
+<option value="M">M</option>
+<option value="L">L</option>
+<option value="XL">XL</option>
+</select>
 
-      var mensaje = "Hola Nickily, quiero un buzo personalizado.%0A"
-        + "Talla: " + talla + "%0A"
-        + "Color: " + color + "%0A"
-        + "Anime: " + anime;
+<label>¿Qué diseño o anime quieres?</label>
+<textarea id="diseno" placeholder="Ej: Naruto modo sabio"></textarea>
 
-      window.open("https://wa.me/573053471863?text=" + mensaje);
-    }
-  </script>
+<button class="btn" onclick="enviarWhatsApp()">Enviar a WhatsApp</button>
+
+</div>
+
+</div>
+
+<script>
+const urlParams = new URLSearchParams(window.location.search);
+const color = urlParams.get('color');
+
+const imagen = document.getElementById('imagenProducto');
+const selectColor = document.getElementById('colorSelect');
+
+if(color){
+imagen.src = "images/producto/" + color + ".jpg";
+selectColor.value = color;
+}else{
+imagen.src = "images/producto/negro.jpg";
+}
+
+selectColor.addEventListener("change", function(){
+imagen.src = "images/producto/" + this.value + ".jpg";
+});
+
+function enviarWhatsApp(){
+const colorElegido = selectColor.value;
+const talla = document.getElementById("talla").value;
+const diseno = document.getElementById("diseno").value;
+
+const mensaje = `Hola Nickily 👋
+
+Quiero personalizar un buso:
+
+Color: ${colorElegido}
+Talla: ${talla}
+Diseño: ${diseno}
+
+¿Me confirmas disponibilidad?`;
+
+const numero = "573053471863";
+const url = "https://wa.me/" + numero + "?text=" + encodeURIComponent(mensaje);
+
+window.location.href = url;
+}
+</script>
 
 </body>
 </html>
