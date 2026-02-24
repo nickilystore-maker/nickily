@@ -1,43 +1,233 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <title>Nickily</title>
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nickily | Busos Personalizados</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#0d0f14;
+color:white;
+}
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+background:#0d0f14;
+position:fixed;
+width:100%;
+top:0;
+z-index:1000;
+}
+
+header h1{
+font-size:24px;
+font-weight:800;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:30px;
+font-weight:400;
+}
+
+section{
+padding:120px 8%;
+}
+
+.hero{
+display:flex;
+justify-content:space-between;
+align-items:center;
+min-height:100vh;
+}
+
+.hero-text h2{
+font-size:60px;
+font-weight:800;
+background:linear-gradient(to right,#00e0ff,#00ffa3);
+-webkit-background-clip:text;
+color:transparent;
+}
+
+.hero-text p{
+margin:20px 0;
+color:#aaa;
+}
+
+.btn{
+display:inline-block;
+padding:15px 30px;
+background:#00e0ff;
+color:black;
+border-radius:8px;
+text-decoration:none;
+font-weight:600;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.card{
+background:#151922;
+padding:20px;
+border-radius:12px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 20px #00e0ff55;
+}
+
+.card img{
+width:100%;
+border-radius:10px;
+}
+
+h3{
+margin:15px 0;
+}
+
+.center{
+text-align:center;
+}
+
+footer{
+background:#0a0c10;
+padding:40px 8%;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:30px;
+}
+
+footer h4{
+margin-bottom:10px;
+}
+
+footer p{
+color:#aaa;
+font-size:14px;
+}
+
+</style>
 </head>
+
 <body>
 
-  <nav>
-    <h2>Nickily</h2>
-    <a href="personalizar.html" class="btn">Personalizar</a>
-  </nav>
+<header>
+<h1>nickily</h1>
+<nav>
+<a href="#catalogo">Catálogo</a>
+<a href="#proceso">Proceso</a>
+<a href="#trabajos">Galería</a>
+</nav>
+</header>
 
-  <section class="hero">
-    <h1>Diseña tu propio estilo</h1>
-    <p>Busos personalizados con tus animes favoritos</p>
-    <a href="personalizar.html" class="btn">Personalizar Ahora</a>
-  </section>
+<section class="hero">
+<div class="hero-text">
+<h2>Convierte tu idea<br>en un buso único</h2>
+<p>Diseños personalizados con tu estilo, tu energía, tu identidad.</p>
+<a href="https://wa.me/573001234567" class="btn">Personaliza el tuyo ahora</a>
+</div>
+<img src="https://images.unsplash.com/photo-1520975922071-c9b1c9f54c34" width="450">
+</section>
 
-  <section class="colors">
-    <h2>Colores Disponibles</h2>
-    <div class="grid">
-      <div class="card">Blanco</div>
-      <div class="card">Rosa</div>
-      <div class="card">Café</div>
-      <div class="card">Negro</div>
-      <div class="card">Rojo</div>
-      <div class="card">Azul</div>
-      <div class="card">Verde</div>
-      <div class="card">Amarillo</div>
-      <div class="card">Gris</div>
-      <div class="card">Morado</div>
-    </div>
-  </section>
+<section id="catalogo">
+<h2 class="center">Elige tu base</h2>
+<br><br>
+<div class="grid">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1602810317569-bcbcf4f79b3d">
+<h3>Buso Negro</h3>
+</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1593032465171-2e2c4aeb5e75">
+<h3>Buso Gris</h3>
+</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1520974735194-2b17c7f6d61a">
+<h3>Buso Blanco</h3>
+</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1593032457866-90c5d8d9c73c">
+<h3>Buso Rojo</h3>
+</div>
+</div>
+</section>
 
-  <section class="cta">
-    <h2>Házlo único. Házlo Nickily.</h2>
-    <a href="personalizar.html" class="btn">Personalizar</a>
-  </section>
+<section id="proceso">
+<h2 class="center">¿Cómo funciona?</h2>
+<br><br>
+<div class="grid">
+<div class="card center">
+<h3>1. Envíanos tu idea</h3>
+<p>Cuéntanos qué diseño quieres.</p>
+</div>
+<div class="card center">
+<h3>2. Diseñamos contigo</h3>
+<p>Creamos tu diseño único.</p>
+</div>
+<div class="card center">
+<h3>3. Recíbelo en casa</h3>
+<p>Producción premium y envío a toda Colombia.</p>
+</div>
+</div>
+</section>
+
+<section id="trabajos">
+<h2 class="center">Nuestros trabajos</h2>
+<br><br>
+<div class="grid">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1602810317569-bcbcf4f79b3d">
+</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1593032465171-2e2c4aeb5e75">
+</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1520974735194-2b17c7f6d61a">
+</div>
+</div>
+</section>
+
+<section class="center">
+<h2>Empieza tu diseño ahora</h2>
+<br>
+<a href="https://wa.me/573001234567" class="btn">Hablar con Nickily</a>
+</section>
+
+<footer>
+<div>
+<h4>nickily</h4>
+<p>Convierte tu estilo en realidad</p>
+</div>
+<div>
+<h4>Navegación</h4>
+<p>Catálogo</p>
+<p>Proceso</p>
+</div>
+<div>
+<h4>Contacto</h4>
+<p>hola@nickily.com</p>
+<p>+57 300 123 4567</p>
+</div>
+</footer>
 
 </body>
 </html>
