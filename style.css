@@ -209,3 +209,10 @@ nav {
 .whatsapp-float:hover {
   transform: scale(1.12);
 }
+
+.testimonials {
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 16px;
+  color: #ddd;
+}
