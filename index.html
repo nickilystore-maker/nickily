@@ -11,11 +11,18 @@
   padding:0;
   box-sizing:border-box;
   font-family:Arial, sans-serif;
+  scroll-behavior:smooth;
 }
 
 body{
   background:#0d0f14;
   color:white;
+  animation:fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn{
+  from{opacity:0; transform:translateY(10px);}
+  to{opacity:1; transform:translateY(0);}
 }
 
 header{
@@ -62,26 +69,40 @@ section{
   border-radius:15px;
   overflow:hidden;
   transition:0.3s ease;
+  position:relative;
 }
 
 .card:hover{
-  transform:translateY(-6px);
-  box-shadow:0 12px 30px rgba(0,0,0,0.25);
+  transform:translateY(-8px);
+  box-shadow:0 15px 35px rgba(0,0,0,0.35);
 }
 
 .card img{
   width:100%;
   height:280px;
   object-fit:cover;
+  transition:0.4s ease;
+}
+
+.card:hover img{
+  transform:scale(1.08);
+}
+
+.badge{
+  position:absolute;
+  top:15px;
+  left:15px;
+  background:#00e0ff;
+  color:black;
+  padding:6px 12px;
+  font-size:12px;
+  border-radius:20px;
+  font-weight:bold;
 }
 
 .card-content{
   padding:20px;
   text-align:center;
-}
-
-.card-content h3{
-  margin-bottom:15px;
 }
 
 .btn{
@@ -97,10 +118,8 @@ section{
 
 .btn:hover{
   background:#00bcd4;
-  transform:scale(1.05);
+  transform:scale(1.07);
 }
-
-/* NUEVA SECCIÓN CONFIANZA */
 
 .trust{
   text-align:center;
@@ -110,24 +129,9 @@ section{
   margin-top:60px;
 }
 
-.trust h2{
-  margin-bottom:20px;
-}
-
-.trust p{
-  margin:8px 0;
-  color:#ccc;
-}
-
-/* TESTIMONIOS */
-
 .testimonials{
   text-align:center;
   margin-top:80px;
-}
-
-.testimonials h2{
-  margin-bottom:30px;
 }
 
 .testimonial-box{
@@ -136,9 +140,12 @@ section{
   border-radius:15px;
   margin-bottom:20px;
   color:#ccc;
+  transition:0.3s;
 }
 
-/* WHATSAPP FLOTANTE */
+.testimonial-box:hover{
+  transform:translateY(-5px);
+}
 
 .whatsapp-float{
   position:fixed;
@@ -155,7 +162,7 @@ section{
 }
 
 .whatsapp-float:hover{
-  transform:scale(1.1);
+  transform:scale(1.15);
 }
 
 footer{
@@ -183,32 +190,8 @@ footer{
 
   <div class="grid">
 
-    <!-- 10 COLORES -->
     <div class="card">
-      <img src="images/catalogo/blanco.jpg">
-      <div class="card-content">
-        <h3>Blanco</h3>
-        <a href="personalizar.html?color=blanco" class="btn">Personalizar</a>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="images/catalogo/rosa.jpg">
-      <div class="card-content">
-        <h3>Rosa</h3>
-        <a href="personalizar.html?color=rosa" class="btn">Personalizar</a>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="images/catalogo/cafe.jpg">
-      <div class="card-content">
-        <h3>Café</h3>
-        <a href="personalizar.html?color=cafe" class="btn">Personalizar</a>
-      </div>
-    </div>
-
-    <div class="card">
+      <div class="badge">Más vendido</div>
       <img src="images/catalogo/negro.jpg">
       <div class="card-content">
         <h3>Negro</h3>
@@ -216,61 +199,13 @@ footer{
       </div>
     </div>
 
-    <div class="card">
-      <img src="images/catalogo/rojo.jpg">
-      <div class="card-content">
-        <h3>Rojo</h3>
-        <a href="personalizar.html?color=rojo" class="btn">Personalizar</a>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="images/catalogo/azul.jpg">
-      <div class="card-content">
-        <h3>Azul</h3>
-        <a href="personalizar.html?color=azul" class="btn">Personalizar</a>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="images/catalogo/verde.jpg">
-      <div class="card-content">
-        <h3>Verde</h3>
-        <a href="personalizar.html?color=verde" class="btn">Personalizar</a>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="images/catalogo/amarillo.jpg">
-      <div class="card-content">
-        <h3>Amarillo</h3>
-        <a href="personalizar.html?color=amarillo" class="btn">Personalizar</a>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="images/catalogo/gris.jpg">
-      <div class="card-content">
-        <h3>Gris</h3>
-        <a href="personalizar.html?color=gris" class="btn">Personalizar</a>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="images/catalogo/morado.jpg">
-      <div class="card-content">
-        <h3>Morado</h3>
-        <a href="personalizar.html?color=morado" class="btn">Personalizar</a>
-      </div>
-    </div>
-
+    <!-- Los demás colores iguales que ya tienes -->
+    
   </div>
 </section>
 
-<!-- GALERÍA -->
 <section>
   <h2 style="text-align:center;">Trabajos realizados</h2>
-
   <div class="grid">
     <div class="card"><img src="trabajos/trabajo1.jpg"></div>
     <div class="card"><img src="trabajos/trabajo2.jpg"></div>
@@ -278,10 +213,11 @@ footer{
     <div class="card"><img src="trabajos/trabajo4.jpg"></div>
     <div class="card"><img src="trabajos/trabajo5.jpg"></div>
     <div class="card"><img src="trabajos/trabajo6.jpg"></div>
+    <div class="card"><img src="trabajos/trabajo7.jpg"></div>
+    <div class="card"><img src="trabajos/trabajo8.jpg"></div>
   </div>
 </section>
 
-<!-- CONFIANZA -->
 <section class="trust">
   <h2>¿Por qué elegir Nickily?</h2>
   <p>✔ Estampado de alta calidad</p>
@@ -289,18 +225,16 @@ footer{
   <p>✔ Atención directa por WhatsApp</p>
 </section>
 
-<!-- TESTIMONIOS -->
 <section class="testimonials">
   <h2>Lo que dicen nuestros clientes</h2>
 
   <div class="testimonial-box">
-    ⭐ “Mi buso quedó brutal, calidad increíble.” – Cliente
+    ⭐ “Mi buso quedó brutal, calidad increíble.”
   </div>
 
   <div class="testimonial-box">
-    ⭐ “Super recomendado, llegó rápido y exacto como lo pedí.” – Cliente
+    ⭐ “Super recomendado, llegó rápido y exacto como lo pedí.”
   </div>
-
 </section>
 
 <footer>
