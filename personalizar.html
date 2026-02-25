@@ -185,5 +185,13 @@ function enviarWhatsApp(){
 }
 </script>
 
+  selectColor.addEventListener("change", function(){
+  imagen.style.opacity = 0;
+  setTimeout(()=>{
+    imagen.src = "images/producto/" + this.value + ".jpg";
+    imagen.style.opacity = 1;
+  },200);
+});
+  
 </body>
 </html>
