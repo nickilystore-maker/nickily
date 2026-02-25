@@ -182,10 +182,7 @@ function enviarWhatsApp(){
 
   const numero = "573053471863";
   window.open(`https://wa.me/${numero}?text=${mensaje}`);
-}
-</script>
-
-  selectColor.addEventListener("change", function(){
+    selectColor.addEventListener("change", function(){
   imagen.style.opacity = 0;
   setTimeout(()=>{
     imagen.src = "images/producto/" + this.value + ".jpg";
@@ -193,5 +190,9 @@ function enviarWhatsApp(){
   },200);
 });
   
+}
+</script>
+
+
 </body>
 </html>
