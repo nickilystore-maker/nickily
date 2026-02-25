@@ -27,6 +27,9 @@ nav {
   transform: scale(1.05);
 }
 
+.product-image img{
+  transition:0.3s ease;
+}
 .hero {
   text-align: center;
   padding: 100px 20px;
