@@ -3,174 +3,311 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nickily</title>
+<title>Nickily | Busos Personalizados</title>
 
 <style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+}
+
 body{
-    margin:0;
-    font-family:Arial, Helvetica, sans-serif;
-    background:#000;
-    color:white;
-    text-align:center;
+  background:#0d0f14;
+  color:white;
+}
+
+header{
+  padding:20px 8%;
+}
+
+header h1{
+  font-size:24px;
+  font-weight:bold;
+}
+
+section{
+  padding:70px 8%;
 }
 
 .hero{
-    padding:80px 20px;
+  text-align:center;
+  padding:100px 20px 60px;
 }
 
-.logo-container{
-    display:inline-block;
-    background:white;
-    padding:15px 25px;
-    border-radius:12px;
-    margin-bottom:25px;
-}
-
-.logo{
-    width:180px;
-}
-
-.hero h1{
-    font-size:40px;
-    letter-spacing:3px;
-    margin:10px 0;
+.hero h2{
+  font-size:48px;
+  font-weight:bold;
+  background: linear-gradient(to right, #00e0ff, #00ffa3);
+  -webkit-background-clip:text;
+  color:transparent;
 }
 
 .hero p{
-    color:#aaa;
-}
-
-.section{
-    padding:60px 20px;
+  margin-top:15px;
+  color:#ccc;
+  font-size:18px;
 }
 
 .grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-    gap:20px;
-    max-width:1100px;
-    margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+  margin-top:40px;
 }
 
-.grid img{
-    width:100%;
-    border-radius:10px;
-    transition:0.3s;
-    cursor:pointer;
+.card{
+  background:#151922;
+  border-radius:15px;
+  overflow:hidden;
+  transition:0.3s ease;
 }
 
-.grid img:hover{
-    transform:scale(1.05);
+.card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 12px 30px rgba(0,0,0,0.25);
 }
 
-.trabajos img{
-    border:2px solid #111;
+.card img{
+  width:100%;
+  height:280px;
+  object-fit:cover;
 }
 
-.testimonios{
-    background:#111;
+.card-content{
+  padding:20px;
+  text-align:center;
 }
 
-.testimonio-box{
-    max-width:800px;
-    margin:20px auto;
-    padding:20px;
-    background:#000;
-    border-radius:10px;
-    border:1px solid #222;
+.card-content h3{
+  margin-bottom:15px;
+}
+
+.btn{
+  display:inline-block;
+  background:#00e0ff;
+  color:black;
+  padding:12px 25px;
+  border-radius:30px;
+  font-weight:bold;
+  text-decoration:none;
+  transition:0.3s ease;
+}
+
+.btn:hover{
+  background:#00bcd4;
+  transform:scale(1.05);
+}
+
+/* NUEVA SECCIÓN CONFIANZA */
+
+.trust{
+  text-align:center;
+  background:#11141b;
+  border-radius:15px;
+  padding:50px 30px;
+  margin-top:60px;
+}
+
+.trust h2{
+  margin-bottom:20px;
+}
+
+.trust p{
+  margin:8px 0;
+  color:#ccc;
+}
+
+/* TESTIMONIOS */
+
+.testimonials{
+  text-align:center;
+  margin-top:80px;
+}
+
+.testimonials h2{
+  margin-bottom:30px;
+}
+
+.testimonial-box{
+  background:#151922;
+  padding:25px;
+  border-radius:15px;
+  margin-bottom:20px;
+  color:#ccc;
+}
+
+/* WHATSAPP FLOTANTE */
+
+.whatsapp-float{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  color:white;
+  font-size:26px;
+  padding:15px;
+  border-radius:50%;
+  text-decoration:none;
+  box-shadow:0 5px 15px rgba(0,0,0,0.3);
+  transition:0.3s ease;
+}
+
+.whatsapp-float:hover{
+  transform:scale(1.1);
 }
 
 footer{
-    padding:40px 20px;
-    background:#000;
-    border-top:1px solid #111;
-    color:#666;
-}
-
-.whatsapp{
-    position:fixed;
-    bottom:20px;
-    right:20px;
-    background:#25D366;
-    color:white;
-    padding:15px 20px;
-    border-radius:50px;
-    text-decoration:none;
-    font-weight:bold;
+  text-align:center;
+  padding:40px;
+  color:#888;
+  font-size:14px;
 }
 </style>
 </head>
 
 <body>
 
-<!-- HERO -->
+<header>
+  <h1>nickily</h1>
+</header>
+
 <section class="hero">
-
-    <div class="logo-container">
-        <img src="images-main/logo.png" class="logo">
-    </div>
-
-    <h1>NICKILY</h1>
-    <p>Personaliza tu estilo</p>
-
+  <h2>Convierte tu idea en un buso único</h2>
+  <p>Personaliza tu estilo. Envíos a toda Colombia</p>
 </section>
 
-<!-- COLORES -->
-<section class="section">
-    <h2>Elige tu color</h2>
-    <div class="grid">
-        <a href="color-rojo.html"><img src="images-main/rojo.jpg"></a>
-        <a href="color-azul.html"><img src="images-main/azul.jpg"></a>
-        <a href="#"><img src="images/catalogo/negro.jpg"></a>
-        <a href="#"><img src="images/catalogo/blanco.jpg"></a>
-        <a href="#"><img src="images/catalogo/verde.jpg"></a>
-        <a href="#"><img src="images/catalogo/mostaza.jpg"></a>
-        <a href="#"><img src="images/catalogo/gris.jpg"></a>
-        <a href="#"><img src="images/catalogo/morado.jpg"></a>
-        <a href="#"><img src="images/catalogo/rosado.jpg"></a>
-        <a href="#"><img src="images/catalogo/cafe.jpg"></a>
+<section id="colores">
+  <h2 style="text-align:center;">Colores disponibles</h2>
+
+  <div class="grid">
+
+    <!-- 10 COLORES -->
+    <div class="card">
+      <img src="images/catalogo/blanco.jpg">
+      <div class="card-content">
+        <h3>Blanco</h3>
+        <a href="personalizar.html?color=blanco" class="btn">Personalizar</a>
+      </div>
     </div>
+
+    <div class="card">
+      <img src="images/catalogo/rosa.jpg">
+      <div class="card-content">
+        <h3>Rosa</h3>
+        <a href="personalizar.html?color=rosa" class="btn">Personalizar</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/catalogo/cafe.jpg">
+      <div class="card-content">
+        <h3>Café</h3>
+        <a href="personalizar.html?color=cafe" class="btn">Personalizar</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/catalogo/negro.jpg">
+      <div class="card-content">
+        <h3>Negro</h3>
+        <a href="personalizar.html?color=negro" class="btn">Personalizar</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/catalogo/rojo.jpg">
+      <div class="card-content">
+        <h3>Rojo</h3>
+        <a href="personalizar.html?color=rojo" class="btn">Personalizar</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/catalogo/azul.jpg">
+      <div class="card-content">
+        <h3>Azul</h3>
+        <a href="personalizar.html?color=azul" class="btn">Personalizar</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/catalogo/verde.jpg">
+      <div class="card-content">
+        <h3>Verde</h3>
+        <a href="personalizar.html?color=verde" class="btn">Personalizar</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/catalogo/amarillo.jpg">
+      <div class="card-content">
+        <h3>Amarillo</h3>
+        <a href="personalizar.html?color=amarillo" class="btn">Personalizar</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/catalogo/gris.jpg">
+      <div class="card-content">
+        <h3>Gris</h3>
+        <a href="personalizar.html?color=gris" class="btn">Personalizar</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/catalogo/morado.jpg">
+      <div class="card-content">
+        <h3>Morado</h3>
+        <a href="personalizar.html?color=morado" class="btn">Personalizar</a>
+      </div>
+    </div>
+
+  </div>
 </section>
 
 <!-- GALERÍA -->
-<section class="section trabajos">
-    <h2>Galería</h2>
-    <div class="grid">
-        <img src="trabajos/trabajo1.jpg">
-        <img src="trabajos/trabajo2.jpg">
-        <img src="trabajos/trabajo3.jpg">
-        <img src="trabajos/trabajo4.jpg">
-        <img src="trabajos/trabajo5.jpg">
-        <img src="trabajos/trabajo6.jpg">
-        <img src="trabajos/trabajo7.jpg">
-        <img src="trabajos/trabajo8.jpg">
-    </div>
+<section>
+  <h2 style="text-align:center;">Trabajos realizados</h2>
+
+  <div class="grid">
+    <div class="card"><img src="trabajos/trabajo1.jpg"></div>
+    <div class="card"><img src="trabajos/trabajo2.jpg"></div>
+    <div class="card"><img src="trabajos/trabajo3.jpg"></div>
+    <div class="card"><img src="trabajos/trabajo4.jpg"></div>
+    <div class="card"><img src="trabajos/trabajo5.jpg"></div>
+    <div class="card"><img src="trabajos/trabajo6.jpg"></div>
+  </div>
+</section>
+
+<!-- CONFIANZA -->
+<section class="trust">
+  <h2>¿Por qué elegir Nickily?</h2>
+  <p>✔ Estampado de alta calidad</p>
+  <p>✔ Colores resistentes al lavado</p>
+  <p>✔ Atención directa por WhatsApp</p>
 </section>
 
 <!-- TESTIMONIOS -->
-<section class="section testimonios">
-    <h2>Lo que dicen nuestros clientes</h2>
+<section class="testimonials">
+  <h2>Lo que dicen nuestros clientes</h2>
 
-    <div class="testimonio-box">
-        ⭐⭐⭐⭐⭐  
-        <p>“Excelente calidad, el estampado quedó brutal.”</p>
-    </div>
+  <div class="testimonial-box">
+    ⭐ “Mi buso quedó brutal, calidad increíble.” – Cliente
+  </div>
 
-    <div class="testimonio-box">
-        ⭐⭐⭐⭐⭐  
-        <p>“Me encantó mi hoodie, volveré a comprar.”</p>
-    </div>
+  <div class="testimonial-box">
+    ⭐ “Super recomendado, llegó rápido y exacto como lo pedí.” – Cliente
+  </div>
+
 </section>
 
-<!-- FOOTER -->
 <footer>
-    © 2026 Nickily - Todos los derechos reservados
+  © 2026 Nickily | Todos los derechos reservados
 </footer>
 
-<!-- WHATSAPP -->
-<a class="whatsapp" href="https://wa.me/573053471863" target="_blank">
-    WhatsApp
-</a>
+<a href="https://wa.me/573053471863" class="whatsapp-float">💬</a>
 
 </body>
 </html>
