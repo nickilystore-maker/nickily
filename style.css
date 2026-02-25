@@ -27,6 +27,15 @@ nav {
   transform: scale(1.05);
 }
 
+.logo-box img{
+  height:65px;
+}
+
+.logo-box{
+  background:white;
+  padding:12px 28px;
+  border-radius:12px;
+}
 .product-image img{
   transition:0.3s ease;
 }
