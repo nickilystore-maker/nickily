@@ -19,11 +19,24 @@ body{
 }
 
 header{
+  display:flex;
+  align-items:center;
+  gap:15px;
   padding:20px 8%;
 }
 
+.logo-box{
+  background:white;
+  padding:8px 18px;
+  border-radius:10px;
+}
+
+.logo-box img{
+  height:35px;
+}
+
 header h1{
-  font-size:24px;
+  font-size:20px;
   font-weight:bold;
 }
 
@@ -100,8 +113,6 @@ section{
   transform:scale(1.05);
 }
 
-/* NUEVA SECCIÓN CONFIANZA */
-
 .trust{
   text-align:center;
   background:#11141b;
@@ -119,8 +130,6 @@ section{
   color:#ccc;
 }
 
-/* TESTIMONIOS */
-
 .testimonials{
   text-align:center;
   margin-top:80px;
@@ -137,8 +146,6 @@ section{
   margin-bottom:20px;
   color:#ccc;
 }
-
-/* WHATSAPP FLOTANTE */
 
 .whatsapp-float{
   position:fixed;
@@ -169,11 +176,11 @@ footer{
 
 <body>
 
-<header style="display:flex; align-items:center; gap:15px; padding:20px 8%;">
-  <div style="background:white; padding:8px 18px; border-radius:10px;">
-    <img src="logo.png" style="height:35px;">
+<header>
+  <div class="logo-box">
+    <img src="logo.png" alt="Nickily Logo">
   </div>
-  <h1 style="font-size:20px; font-weight:bold;">nickily</h1>
+  <h1>nickily</h1>
 </header>
 
 <section class="hero">
@@ -186,12 +193,11 @@ footer{
 
   <div class="grid">
 
-    <!-- 10 COLORES -->
     <div class="card">
       <img src="images/catalogo/blanco.jpg">
       <div class="card-content">
         <h3>Blanco</h3>
-        <a href="personalizar.html?color=blanco" class="btn">Personalizar</a>
+        <a href="personalizar.html?color=blanco" class="btn">Personalizar ahora 🔥</a>
       </div>
     </div>
 
@@ -199,7 +205,7 @@ footer{
       <img src="images/catalogo/rosa.jpg">
       <div class="card-content">
         <h3>Rosa</h3>
-        <a href="personalizar.html?color=rosa" class="btn">Personalizar</a>
+        <a href="personalizar.html?color=rosa" class="btn">Personalizar ahora 🔥</a>
       </div>
     </div>
 
@@ -207,7 +213,7 @@ footer{
       <img src="images/catalogo/cafe.jpg">
       <div class="card-content">
         <h3>Café</h3>
-        <a href="personalizar.html?color=cafe" class="btn">Personalizar</a>
+        <a href="personalizar.html?color=cafe" class="btn">Personalizar ahora 🔥</a>
       </div>
     </div>
 
@@ -215,7 +221,7 @@ footer{
       <img src="images/catalogo/negro.jpg">
       <div class="card-content">
         <h3>Negro</h3>
-        <a href="personalizar.html?color=negro" class="btn">Personalizar</a>
+        <a href="personalizar.html?color=negro" class="btn">Personalizar ahora 🔥</a>
       </div>
     </div>
 
@@ -223,7 +229,7 @@ footer{
       <img src="images/catalogo/rojo.jpg">
       <div class="card-content">
         <h3>Rojo</h3>
-        <a href="personalizar.html?color=rojo" class="btn">Personalizar</a>
+        <a href="personalizar.html?color=rojo" class="btn">Personalizar ahora 🔥</a>
       </div>
     </div>
 
@@ -231,7 +237,7 @@ footer{
       <img src="images/catalogo/azul.jpg">
       <div class="card-content">
         <h3>Azul</h3>
-        <a href="personalizar.html?color=azul" class="btn">Personalizar</a>
+        <a href="personalizar.html?color=azul" class="btn">Personalizar ahora 🔥</a>
       </div>
     </div>
 
@@ -239,15 +245,15 @@ footer{
       <img src="images/catalogo/verde.jpg">
       <div class="card-content">
         <h3>Verde</h3>
-        <a href="personalizar.html?color=verde" class="btn">Personalizar</a>
+        <a href="personalizar.html?color=verde" class="btn">Personalizar ahora 🔥</a>
       </div>
     </div>
 
     <div class="card">
-      <img src="images/catalogo/amarillo.jpg">
+      <img src="images/catalogo/mostaza.jpg">
       <div class="card-content">
-        <h3>Amarillo</h3>
-        <a href="personalizar.html?color=amarillo" class="btn">Personalizar</a>
+        <h3>Mostaza</h3>
+        <a href="personalizar.html?color=mostaza" class="btn">Personalizar ahora 🔥</a>
       </div>
     </div>
 
@@ -255,7 +261,7 @@ footer{
       <img src="images/catalogo/gris.jpg">
       <div class="card-content">
         <h3>Gris</h3>
-        <a href="personalizar.html?color=gris" class="btn">Personalizar</a>
+        <a href="personalizar.html?color=gris" class="btn">Personalizar ahora 🔥</a>
       </div>
     </div>
 
@@ -263,14 +269,13 @@ footer{
       <img src="images/catalogo/morado.jpg">
       <div class="card-content">
         <h3>Morado</h3>
-        <a href="personalizar.html?color=morado" class="btn">Personalizar</a>
+        <a href="personalizar.html?color=morado" class="btn">Personalizar ahora 🔥</a>
       </div>
     </div>
 
   </div>
 </section>
 
-<!-- GALERÍA -->
 <section>
   <h2 style="text-align:center;">Trabajos realizados</h2>
 
@@ -281,10 +286,11 @@ footer{
     <div class="card"><img src="trabajos/trabajo4.jpg"></div>
     <div class="card"><img src="trabajos/trabajo5.jpg"></div>
     <div class="card"><img src="trabajos/trabajo6.jpg"></div>
+    <div class="card"><img src="trabajos/trabajo7.jpg"></div>
+    <div class="card"><img src="trabajos/trabajo8.jpg"></div>
   </div>
 </section>
 
-<!-- CONFIANZA -->
 <section class="trust">
   <h2>¿Por qué elegir Nickily?</h2>
   <p>✔ Estampado de alta calidad</p>
@@ -292,7 +298,6 @@ footer{
   <p>✔ Atención directa por WhatsApp</p>
 </section>
 
-<!-- TESTIMONIOS -->
 <section class="testimonials">
   <h2>Lo que dicen nuestros clientes</h2>
 
@@ -303,7 +308,6 @@ footer{
   <div class="testimonial-box">
     ⭐ “Super recomendado, llegó rápido y exacto como lo pedí.” – Cliente
   </div>
-
 </section>
 
 <footer>
