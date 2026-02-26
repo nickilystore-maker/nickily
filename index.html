@@ -5,173 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nickily | Busos Personalizados</title>
 
-<style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:Arial, sans-serif;
-}
+<!-- CONEXIÓN AL CSS -->
+<link rel="stylesheet" href="style.css?v=10">
 
-body{
-  background:#0d0f14;
-  color:white;
-}
-
-header{
-  display:flex;
-  align-items:center;
-  gap:15px;
-  padding:20px 8%;
-}
-
-.logo-box{
-  background:white;
-  padding:8px 18px;
-  border-radius:10px;
-}
-
-.logo-box img{
-  height:35px;
-}
-
-header h1{
-  font-size:20px;
-  font-weight:bold;
-}
-
-section{
-  padding:70px 8%;
-}
-
-.hero{
-  text-align:center;
-  padding:100px 20px 60px;
-}
-
-.hero h2{
-  font-size:48px;
-  font-weight:bold;
-  background: linear-gradient(to right, #00e0ff, #00ffa3);
-  -webkit-background-clip:text;
-  color:transparent;
-}
-
-.hero p{
-  margin-top:15px;
-  color:#ccc;
-  font-size:18px;
-}
-
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:30px;
-  margin-top:40px;
-}
-
-.card{
-  background:#151922;
-  border-radius:15px;
-  overflow:hidden;
-  transition:0.3s ease;
-}
-
-.card:hover{
-  transform:translateY(-6px);
-  box-shadow:0 12px 30px rgba(0,0,0,0.25);
-}
-
-.card img{
-  width:100%;
-  height:280px;
-  object-fit:cover;
-}
-
-.card-content{
-  padding:20px;
-  text-align:center;
-}
-
-.card-content h3{
-  margin-bottom:15px;
-}
-
-.btn{
-  display:inline-block;
-  background:#00e0ff;
-  color:black;
-  padding:12px 25px;
-  border-radius:30px;
-  font-weight:bold;
-  text-decoration:none;
-  transition:0.3s ease;
-}
-
-.btn:hover{
-  background:#00bcd4;
-  transform:scale(1.05);
-}
-
-.trust{
-  text-align:center;
-  background:#11141b;
-  border-radius:15px;
-  padding:50px 30px;
-  margin-top:60px;
-}
-
-.trust h2{
-  margin-bottom:20px;
-}
-
-.trust p{
-  margin:8px 0;
-  color:#ccc;
-}
-
-.testimonials{
-  text-align:center;
-  margin-top:80px;
-}
-
-.testimonials h2{
-  margin-bottom:30px;
-}
-
-.testimonial-box{
-  background:#151922;
-  padding:25px;
-  border-radius:15px;
-  margin-bottom:20px;
-  color:#ccc;
-}
-
-.whatsapp-float{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#25D366;
-  color:white;
-  font-size:26px;
-  padding:15px;
-  border-radius:50%;
-  text-decoration:none;
-  box-shadow:0 5px 15px rgba(0,0,0,0.3);
-  transition:0.3s ease;
-}
-
-.whatsapp-float:hover{
-  transform:scale(1.1);
-}
-
-footer{
-  text-align:center;
-  padding:40px;
-  color:#888;
-  font-size:14px;
-}
-</style>
 </head>
 
 <body>
@@ -183,12 +19,12 @@ footer{
   <h1>nickily</h1>
 </header>
 
-<section class="hero fade">
+<section class="hero">
   <h2>Convierte tu idea en un buso único</h2>
   <p>Personaliza tu estilo. Envíos a toda Colombia</p>
 </section>
 
-<section id="colores" class="fade">>
+<section id="colores">
   <h2 style="text-align:center;">Colores disponibles</h2>
 
   <div class="grid">
@@ -279,7 +115,7 @@ footer{
 <section>
   <h2 style="text-align:center;">Trabajos realizados</h2>
 
-  <div class="grid"="fade">
+  <div class="grid">
     <div class="card"><img src="trabajos/trabajo1.jpg"></div>
     <div class="card"><img src="trabajos/trabajo2.jpg"></div>
     <div class="card"><img src="trabajos/trabajo3.jpg"></div>
@@ -291,36 +127,36 @@ footer{
   </div>
 </section>
 
-<section class="trust fade">
+<section class="trust">
   <h2>¿Por qué elegir Nickily?</h2>
   <p>✔ Estampado de alta calidad</p>
   <p>✔ Colores resistentes al lavado</p>
   <p>✔ Atención directa por WhatsApp</p>
 </section>
 
-<section class="testimonial-box">
+<section class="testimonials">
   <h2>Lo que dicen nuestros clientes</h2>
 
   <div class="testimonial-box">
-    ⭐ “Mi buso quedó brutal, calidad increíble.” – Cliente</p>
+    ⭐ “Mi buso quedó brutal, calidad increíble.”
     <strong>— Zhaky.</strong>
   </div>
-  
-  <div class="testimonial-box fade">
-  <p>⭐"La calidad superó mis expectativas. El estampado quedó brutal 🔥"</p>
-  <strong>— Andrés M.</strong>
-  </div>
-  
-  <div class="testimonial-box fade">
-  <p>⭐"Pedí uno personalizado y llegó perfecto. Definitivamente volveré a comprar."</p>
-  <strong>— Laura G.</strong>
-  </div>
-  
+
   <div class="testimonial-box">
-    ⭐ “Super recomendado, llegó rápido y exacto como lo pedí.” – Cliente</p>
+    ⭐ “La calidad superó mis expectativas. El estampado quedó brutal 🔥”
+    <strong>— Andrés M.</strong>
+  </div>
+
+  <div class="testimonial-box">
+    ⭐ “Pedí uno personalizado y llegó perfecto. Definitivamente volveré a comprar.”
+    <strong>— Laura G.</strong>
+  </div>
+
+  <div class="testimonial-box">
+    ⭐ “Super recomendado, llegó rápido y exacto como lo pedí.”
     <strong>— Jonatan R.</strong>
   </div>
-  
+
 </section>
 
 <footer>
