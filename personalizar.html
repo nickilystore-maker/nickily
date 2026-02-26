@@ -193,6 +193,31 @@ function enviarWhatsApp(){
 }
 </script>
 
+<script>
+/* Detecta scroll y activa animaciones */
+document.addEventListener("DOMContentLoaded", () => {
+  const faders = document.querySelectorAll(".fade");
+  const testimonials = document.querySelectorAll(".testimonial-box");
 
+  const options = { threshold: 0.3 };
+
+  const appearOnScroll = new IntersectionObserver(function(entries, appearObserver) {
+    entries.forEach(entry => {
+      if(!entry.isIntersecting) return;
+      entry.target.classList.add("visible");
+      appearObserver.unobserve(entry.target);
+    });
+  }, options);
+
+  faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+  });
+
+  testimonials.forEach(testimonial => {
+    appearOnScroll.observe(testimonial);
+  });
+});
+</script>
+  
 </body>
 </html>
