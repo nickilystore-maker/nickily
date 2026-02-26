@@ -32,20 +32,19 @@ header{
  padding:22px 8%;
 }
 
-/* ===== LOGO CORREGIDO ===== */
-
+/* ===== LOGO AJUSTADO ===== */
 .logo-box{
  background:white;
- padding:10px 22px;
- border-radius:12px;
+ padding:6px 10px;         /* menos padding para que no se vea enorme el contenedor */
+ border-radius:10px;
  display:flex;
  align-items:center;
+ justify-content:center;
 }
 
 .logo-box img{
- height:65px;   /* más visible pero no exagerado */
+ height:80px;              /* más alto, sin exagerar */
  width:auto;
- display:block;
 }
 
 /* NICKILY EN MAYÚSCULAS OPTIMIZADO */
