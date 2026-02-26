@@ -4,85 +4,215 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Personalizar | Nickily</title>
-<link rel="stylesheet" href="style.css?v=11">
+
+<style>
+*{
+ margin:0;
+ padding:0;
+ box-sizing:border-box;
+ font-family:Arial, sans-serif;
+}
+
+body{
+ background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)), url("images/fondo-personalizar.jpg");
+ background-size:cover;
+ background-position:center;
+ background-attachment:fixed;
+ background-repeat:no-repeat;
+ color:white;
+ padding:80px 8%;
+}
+
+h2{
+ text-align:center;
+ margin-bottom:50px;
+ font-size:32px;
+ background: linear-gradient(to right, #00e0ff, #00ffa3);
+ -webkit-background-clip:text;
+ color:transparent;
+}
+
+.container{
+ display:grid;
+ grid-template-columns:1fr 1fr;
+ gap:50px;
+ align-items:center;
+}
+
+/* IMAGEN PRODUCTO */
+
+.product-image{
+ background: rgba(21,25,34,0.95);
+ backdrop-filter: blur(8px);
+ padding:30px;
+ border-radius:20px;
+ text-align:center;
+ box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+
+.product-image img{
+ width:100%;
+ max-height:500px;
+ object-fit:contain;
+ transition:0.3s ease;
+}
+
+/* FORMULARIO */
+
+.form-box{
+ background: rgba(21,25,34,0.95);
+ backdrop-filter: blur(8px);
+ padding:35px;
+ border-radius:20px;
+ box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+
+.form-box label{
+ display:block;
+ margin-top:20px;
+ margin-bottom:8px;
+ font-size:15px;
+ color:#ccc;
+}
+
+.form-box select,
+.form-box textarea{
+ width:100%;
+ padding:12px;
+ border-radius:10px;
+ border:none;
+ margin-bottom:10px;
+ background:#0d0f14;
+ color:white;
+}
+
+.form-box textarea{
+ height:110px;
+ resize:none;
+}
+
+/* BOTÓN */
+
+.btn{
+ display:block;
+ margin-top:25px;
+ background:#00e0ff;
+ color:black;
+ font-weight:bold;
+ padding:14px;
+ text-align:center;
+ border:none;
+ border-radius:30px;
+ cursor:pointer;
+ font-size:16px;
+ transition:0.3s ease;
+}
+
+.btn:hover{
+ background:#00bcd4;
+ transform:scale(1.05);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+ .container{
+  grid-template-columns:1fr;
+ }
+}
+</style>
+
 </head>
 
 <body>
 
-<header>
-    <div class="logo-box">
-        <img src="logo.png" alt="Nickily Logo">
-    </div>
-    <h1>nickily</h1>
-    <a href="index.html" class="btn header-btn">Volver</a>
-</header>
+<h2>Personaliza tu buso</h2>
 
-<section class="hero">
-    <h2>Personaliza tu buso</h2>
-    <p>Elige talla, confirma color y dinos el anime que quieres</p>
-</section>
+<div class="container">
 
-<section class="form-section">
+<div class="product-image">
+ <img id="imagenProducto" src="">
+</div>
 
-    <div class="form-box">
+<div class="form-box">
 
-        <label>Color seleccionado</label>
-        <input type="text" id="color" readonly>
+ <label>Color</label>
+ <select id="colorSelect">
+  <option value="blanco">Blanco</option>
+  <option value="rosa">Rosa</option>
+  <option value="cafe">Café</option>
+  <option value="negro">Negro</option>
+  <option value="rojo">Rojo</option>
+  <option value="azul">Azul</option>
+  <option value="verde">Verde</option>
+  <option value="mostaza">Mostaza</option>
+  <option value="gris">Gris</option>
+  <option value="morado">Morado</option>
+ </select>
 
-        <label>Selecciona tu talla</label>
-        <select id="talla">
-            <option value="">Seleccionar</option>
-            <option value="S">S</option>
-            <option value="M">M</option>
-            <option value="L">L</option>
-            <option value="XL">XL</option>
-        </select>
+ <label>Talla</label>
+ <select id="talla">
+  <option value="S">S</option>
+  <option value="M">M</option>
+  <option value="L">L</option>
+  <option value="XL">XL</option>
+ </select>
 
-        <label>¿Qué anime quieres?</label>
-        <input type="text" id="anime" placeholder="Ej: Naruto, One Piece, Attack on Titan">
+ <label>¿Qué anime o diseño quieres?</label>
+ <textarea id="diseno" placeholder="Ej: Naruto, One Piece, Demon Slayer..."></textarea>
 
-        <button class="btn hero-btn" onclick="enviarPedido()">Enviar a WhatsApp 🔥</button>
+ <button class="btn" onclick="enviarWhatsApp()">Enviar a WhatsApp</button>
 
-    </div>
-
-</section>
-
-<footer>
-    © 2026 Nickily | Todos los derechos reservados
-</footer>
+</div>
+</div>
 
 <script>
 
-// Captura color desde URL
 const params = new URLSearchParams(window.location.search);
-const color = params.get("color");
+const colorURL = params.get('color');
 
-if(color){
-    document.getElementById("color").value = color;
+const imagen = document.getElementById('imagenProducto');
+const selectColor = document.getElementById('colorSelect');
+
+if(colorURL){
+ imagen.src = "images/producto/" + colorURL + ".jpg";
+ selectColor.value = colorURL;
+}else{
+ imagen.src = "images/producto/negro.jpg";
 }
 
-// Enviar a WhatsApp
-function enviarPedido(){
+/* Cambio de imagen */
+selectColor.addEventListener("change", function(){
+ imagen.style.opacity = 0;
 
-    const color = document.getElementById("color").value;
-    const talla = document.getElementById("talla").value;
-    const anime = document.getElementById("anime").value;
+ setTimeout(()=>{
+  imagen.src = "images/producto/" + this.value + ".jpg";
+  imagen.style.opacity = 1;
+ },200);
+});
 
-    if(!talla || !anime){
-        alert("Por favor completa talla y anime");
-        return;
-    }
+function enviarWhatsApp(){
 
-    const mensaje = `Hola Nickily 👋 
+ const colorElegido = selectColor.value;
+ const talla = document.getElementById("talla").value;
+ const diseno = document.getElementById("diseno").value.trim();
+
+ if(diseno === ""){
+  alert("Escribe el diseño o anime que quieres");
+  return;
+ }
+
+ const mensaje = `Hola Nickily 👋
 Quiero personalizar un buso:
 
-Color: ${color}
+Color: ${colorElegido}
 Talla: ${talla}
-Anime: ${anime}`;
+Diseño: ${diseno}`;
 
-    const url = `https://wa.me/573053471863?text=${encodeURIComponent(mensaje)}`;
+ const numero = "573053471863";
+ const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
 
-    window.open(url, "_blank");
+ window.open(url, "_blank");
 }
 
 </script>
