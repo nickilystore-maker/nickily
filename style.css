@@ -235,3 +235,20 @@ footer{
  color:#888;
  font-size:14px;
 }
+
+.video-product{
+ text-align:center;
+ margin-top:60px;
+}
+
+.video-product video{
+ width:100%;
+ max-width:420px;
+ border-radius:20px;
+ box-shadow:0 15px 40px rgba(0,224,255,0.25);
+ transition:transform 0.3s ease;
+}
+
+.video-product video:hover{
+ transform:scale(1.03);
+}
