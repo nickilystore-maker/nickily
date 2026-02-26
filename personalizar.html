@@ -1,10 +1,3 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Personalizar | Nickily</title>
-
 <style>
 *{
   margin:0;
@@ -14,9 +7,28 @@
 }
 
 body{
-  background:#0d0f14;
+  /* FONDO NUEVO */
+  background: 
+    linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)),
+    url("images/fondo-personalizar.jpg");
+    
+  background-size:cover;
+  background-position:center;
+  background-attachment:fixed;
+  background-repeat:no-repeat;
+
   color:white;
   padding:80px 8%;
+}
+
+/* Oscurece un poco más las cajas para que resalten */
+.product-image,
+.form-box{
+  background: rgba(21,25,34,0.95);
+  backdrop-filter: blur(8px);
+  padding:35px;
+  border-radius:20px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.4);
 }
 
 h2{
@@ -26,7 +38,7 @@ h2{
   background: linear-gradient(to right, #00e0ff, #00ffa3);
   -webkit-background-clip:text;
   color:transparent;
-} 
+}
 
 .container{
   display:grid;
@@ -37,9 +49,6 @@ h2{
 
 /* IMAGEN PRODUCTO */
 .product-image{
-  background:#151922;
-  padding:30px;
-  border-radius:20px;
   text-align:center;
 }
 
@@ -47,15 +56,10 @@ h2{
   width:100%;
   max-height:500px;
   object-fit:contain;
+  transition:0.3s ease;
 }
 
 /* FORMULARIO */
-.form-box{
-  background:#151922;
-  padding:35px;
-  border-radius:20px;
-}
-
 .form-box label{
   display:block;
   margin-top:20px;
@@ -108,116 +112,3 @@ h2{
   }
 }
 </style>
-</head>
-
-<body>
-
-<h2>Personaliza tu buso</h2>
-
-<div class="container">
-
-  <!-- IMAGEN -->
-  <div class="product-image">
-    <img id="imagenProducto" src="">
-  </div>
-
-  <!-- FORMULARIO -->
-  <div class="form-box">
-
-    <label>Color</label>
-    <select id="colorSelect">
-      <option value="blanco">Blanco</option>
-      <option value="rosa">Rosa</option>
-      <option value="cafe">Café</option>
-      <option value="negro">Negro</option>
-      <option value="rojo">Rojo</option>
-      <option value="azul">Azul</option>
-      <option value="verde">Verde</option>
-      <option value="mostaza">Mostaza</option>
-      <option value="gris">Gris</option>
-      <option value="morado">Morado</option>
-    </select>
-
-    <label>Talla</label>
-    <select id="talla">
-      <option>S</option>
-      <option>M</option>
-      <option>L</option>
-      <option>XL</option>
-    </select>
-
-    <label>¿Qué anime o diseño quieres?</label>
-    <textarea id="diseno" placeholder="Ej: Naruto, One Piece, Demon Slayer..."></textarea>
-
-    <button class="btn" onclick="enviarWhatsApp()">Enviar a WhatsApp</button>
-
-  </div>
-
-</div>
-
-<script>
-const params = new URLSearchParams(window.location.search);
-const color = params.get('color');
-
-const imagen = document.getElementById('imagenProducto');
-const selectColor = document.getElementById('colorSelect');
-
-if(color){
-  imagen.src = "images/producto/" + color + ".jpg";
-  selectColor.value = color;
-}else{
-  imagen.src = "images/producto/negro.jpg";
-}
-
-selectColor.addEventListener("change", function(){
-  imagen.src = "images/producto/" + this.value + ".jpg";
-});
-
-function enviarWhatsApp(){
-  const colorElegido = selectColor.value;
-  const talla = document.getElementById("talla").value;
-  const diseno = document.getElementById("diseno").value;
-
-  const mensaje = `Hola Nickily 👋%0AQuiero personalizar un buso:%0AColor: ${colorElegido}%0ATalla: ${talla}%0ADiseño: ${diseno}`;
-
-  const numero = "573053471863";
-  window.open(`https://wa.me/${numero}?text=${mensaje}`);
-    selectColor.addEventListener("change", function(){
-  imagen.style.opacity = 0;
-  setTimeout(()=>{
-    imagen.src = "images/producto/" + this.value + ".jpg";
-    imagen.style.opacity = 1;
-  },200);
-});
-  
-}
-</script>
-
-<script>
-/* Detecta scroll y activa animaciones */
-document.addEventListener("DOMContentLoaded", () => {
-  const faders = document.querySelectorAll(".fade");
-  const testimonials = document.querySelectorAll(".testimonial-box");
-
-  const options = { threshold: 0.3 };
-
-  const appearOnScroll = new IntersectionObserver(function(entries, appearObserver) {
-    entries.forEach(entry => {
-      if(!entry.isIntersecting) return;
-      entry.target.classList.add("visible");
-      appearObserver.unobserve(entry.target);
-    });
-  }, options);
-
-  faders.forEach(fader => {
-    appearOnScroll.observe(fader);
-  });
-
-  testimonials.forEach(testimonial => {
-    appearOnScroll.observe(testimonial);
-  });
-});
-</script>
-  
-</body>
-</html>
