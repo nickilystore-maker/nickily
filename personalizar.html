@@ -4,63 +4,87 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Personalizar | Nickily</title>
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="style.css?v=11">
 </head>
 
 <body>
 
+<header>
+    <div class="logo-box">
+        <img src="logo.png" alt="Nickily Logo">
+    </div>
+    <h1>nickily</h1>
+    <a href="index.html" class="btn header-btn">Volver</a>
+</header>
+
 <section class="hero">
-  <h1>Personaliza tu buzo</h1>
-  <p>Selecciona los detalles y envíanos tu idea.</p>
+    <h2>Personaliza tu buso</h2>
+    <p>Elige talla, confirma color y dinos el anime que quieres</p>
 </section>
 
-<section style="padding:40px;text-align:center;">
+<section class="form-section">
 
-<select id="talla">
-<option value="">Selecciona talla</option>
-<option>XS</option>
-<option>S</option>
-<option>M</option>
-<option>L</option>
-<option>XL</option>
-</select>
+    <div class="form-box">
 
-<br><br>
+        <label>Color seleccionado</label>
+        <input type="text" id="color" readonly>
 
-<select id="color">
-<option value="">Selecciona color</option>
-<option>Blanco</option>
-<option>Rosa</option>
-<option>Café</option>
-<option>Negro</option>
-<option>Rojo</option>
-<option>Azul</option>
-<option>Verde</option>
-<option>Amarillo</option>
-<option>Gris</option>
-<option>Morado</option>
-</select>
+        <label>Selecciona tu talla</label>
+        <select id="talla">
+            <option value="">Seleccionar</option>
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+        </select>
 
-<br><br>
+        <label>¿Qué anime quieres?</label>
+        <input type="text" id="anime" placeholder="Ej: Naruto, One Piece, Attack on Titan">
 
-<textarea id="anime" placeholder="Escribe el anime o diseño que quieres" rows="4" cols="30"></textarea>
+        <button class="btn hero-btn" onclick="enviarPedido()">Enviar a WhatsApp 🔥</button>
 
-<br><br>
-
-<button onclick="enviar()" class="btn-primary">Enviar a WhatsApp</button>
+    </div>
 
 </section>
+
+<footer>
+    © 2026 Nickily | Todos los derechos reservados
+</footer>
 
 <script>
-function enviar() {
-  var talla = document.getElementById("talla").value;
-  var color = document.getElementById("color").value;
-  var anime = document.getElementById("anime").value;
 
-  var mensaje = "Hola Nickily, quiero un buzo personalizado.%0A%0ATalla: " + talla + "%0AColor: " + color + "%0AAnime/Diseño: " + anime;
+// Captura color desde URL
+const params = new URLSearchParams(window.location.search);
+const color = params.get("color");
 
-  window.open("https://wa.me/573053471863?text=" + mensaje, "_blank");
+if(color){
+    document.getElementById("color").value = color;
 }
+
+// Enviar a WhatsApp
+function enviarPedido(){
+
+    const color = document.getElementById("color").value;
+    const talla = document.getElementById("talla").value;
+    const anime = document.getElementById("anime").value;
+
+    if(!talla || !anime){
+        alert("Por favor completa talla y anime");
+        return;
+    }
+
+    const mensaje = `Hola Nickily 👋 
+Quiero personalizar un buso:
+
+Color: ${color}
+Talla: ${talla}
+Anime: ${anime}`;
+
+    const url = `https://wa.me/573053471863?text=${encodeURIComponent(mensaje)}`;
+
+    window.open(url, "_blank");
+}
+
 </script>
 
 </body>
