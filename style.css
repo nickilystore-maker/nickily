@@ -56,11 +56,11 @@ header{
  display:flex;
  align-items:center;
  justify-content:space-between;
- padding:14px 8%;
+ padding:25px 18%;
 }
 
 .logo-box img {
-    height: 60px;
+    height: 70px;
     width:auto;
 }
 
