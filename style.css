@@ -38,9 +38,8 @@ header{
  border-radius:10px;
 }
 
-.logo img {
-    width: 30px;   /* tamaño más equilibrado */
-    height: auto;
+.logo-box img {
+     height:70px;
 }
 }
 
