@@ -227,3 +227,42 @@ footer{
  color:#888;
  font-size:14px;
 }
+
+.price-box{
+ margin-top:25px;
+ font-size:22px;
+}
+
+.price-box p{
+ color:#ccc;
+ font-size:14px;
+}
+
+.urgency{
+ margin-top:15px;
+ font-size:14px;
+ color:#00e0ff;
+}
+
+.how-it-works{
+ text-align:center;
+ margin-top:60px;
+}
+
+.steps{
+ display:flex;
+ justify-content:center;
+ gap:40px;
+ margin-top:30px;
+ flex-wrap:wrap;
+ font-size:18px;
+}
+
+.brand-message{
+ text-align:center;
+ margin-top:80px;
+ font-size:24px;
+ background:linear-gradient(to right,#00e0ff,#00ffa3);
+ -webkit-background-clip:text;
+ color:transparent;
+}
