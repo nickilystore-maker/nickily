@@ -33,13 +33,13 @@ header{
 }
 
 .logo img {
-    width: 85px; /* un poco más grande pero elegante */
+    width: 100px; /* un poco más grande pero elegante */
     height: auto;
     transition: 0.3s ease;
 }
 
 .logo-box img {
-    max-width: 55px;
+    max-width: 70px;
     width: 100%;
     height: auto;
 }
