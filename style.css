@@ -289,3 +289,15 @@ footer{
     height: auto;
     transition: 0.3s ease;
 }
+
+.logo-box img {
+    max-width: 55px;
+    width: 100%;
+    height: auto;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
