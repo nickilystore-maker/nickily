@@ -39,9 +39,9 @@ header{
 }
 
 .logo img {
-    width: 85px; /* un poco más grande pero elegante */
+    width: 65px;   /* tamaño más equilibrado */
     height: auto;
-    transition: 0.3s ease;
+}
 }
 
 header h1{
