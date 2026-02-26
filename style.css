@@ -34,8 +34,8 @@ header{
 
 .logo-box{
  background:white;
- padding:18px 28px;
- border-radius:20px;
+ padding:8px 18px;
+ border-radius:10px;
 }
 
 .logo img {
@@ -283,4 +283,10 @@ footer{
  margin-top:15px;
  font-size:14px;
  color:#00e0ff;
+}
+
+.logo img {
+    width: 85px; /* un poco más grande pero elegante */
+    height: auto;
+    transition: 0.3s ease;
 }
