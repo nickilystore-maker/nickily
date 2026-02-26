@@ -2,123 +2,54 @@ body {
   margin: 0;
   font-family: Arial;
   background: #f4f8ff;
+  scroll-behavior: smooth;
 }
 
+/* NAV */
 nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 20px 40px;
   background: white;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-.btn {
-  display: inline-block;
-  background: #00e0ff;
-  color: black;
-  padding: 13px 28px;
-  border-radius: 30px;
-  font-weight: 700;
-  text-decoration: none;
+/* LOGO MÁS PROTAGONISTA */
+.logo-box img{
+  height:85px; /* antes 65px */
   transition: 0.3s ease;
 }
 
-.btn:hover {
-  background: #00bcd4;
+.logo-box img:hover{
   transform: scale(1.05);
-}
-
-.logo-box img{
-  height:65px;
 }
 
 .logo-box{
   background:white;
-  padding:12px 28px;
-  border-radius:12px;
-}
-.product-image img{
-  transition:0.3s ease;
-}
-.hero {
-  text-align: center;
-  padding: 100px 20px;
-  background: linear-gradient(135deg, #0066ff, #00c3ff);
-  color: white;
+  padding:14px 32px;
+  border-radius:16px;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 20px;
-  padding: 40px;
-}
-
-.card {
-  background: white;
-  padding: 30px;
-  border-radius: 15px;
-  text-align: center;
-}
-
-.cta {
-  text-align: center;
-  padding: 80px 20px;
-  background: #0066ff;
-  color: white;
-}
-
-.form-container {
-  max-width: 400px;
-  margin: 50px auto;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-/* Mejora efecto tarjetas colores */
-.color-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.color-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
-}
-
-/* Galería moderna */
-.gallery-item {
-  position: relative;
-  overflow: hidden;
-}
-
-.gallery-item img {
-  transition: transform 0.4s ease;
-}
-
-.gallery-item:hover img {
-  transform: scale(1.1);
-}
-
-.whatsapp-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #25D366;
-  color: white;
-  font-size: 24px;
-  padding: 15px 18px;
-  border-radius: 50%;
+/* BOTONES */
+.btn {
+  display: inline-block;
+  background: linear-gradient(45deg, #00e0ff, #00ffa3);
+  color: black;
+  padding: 14px 30px;
+  border-radius: 30px;
+  font-weight: 700;
   text-decoration: none;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
   transition: 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0,224,255,0.3);
 }
 
-.whatsapp-float:hover {
-  transform: scale(1.1);
-}
-.trust {
-  text-align: center;
-  padding: 50px 20px;
+.btn:hover {
+  transform: scale(1.07);
+  box-shadow: 0 12px 25px rgba(0,224,255,0.5);
 }
 
 /* HERO IMPACTANTE */
@@ -139,17 +70,18 @@ nav {
   width: 100%;
   height: 100%;
   background: url("images/catalogo/negro.jpg") center/cover no-repeat;
-  filter: brightness(0.3);
+  filter: brightness(0.35);
 }
 
 .hero-text {
   position: relative;
   z-index: 2;
   color: white;
+  animation: fadeUp 1.2s ease forwards;
 }
 
 .hero-text h2 {
-  font-size: 48px;
+  font-size: 52px;
   font-weight: 800;
   background: linear-gradient(to right, #00e0ff, #00ffa3);
   -webkit-background-clip: text;
@@ -158,41 +90,52 @@ nav {
 
 .hero-text p {
   margin-top: 15px;
-  font-size: 18px;
-  color: #ccc;
+  font-size: 20px;
+  color: #ddd;
 }
 
 .hero-text .btn {
-  margin-top: 25px;
-  padding: 15px 30px;
-  font-size: 18px;
+  margin-top: 30px;
+  font-size: 20px;
 }
 
-.trust {
-  text-align: center;
-  padding: 50px 20px;
-  background: #0d0f14;
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 25px;
+  padding: 50px;
 }
 
-.trust h2 {
-  font-size: 28px;
-  margin-bottom: 15px;
-}
-
-.trust p {
-  font-size: 16px;
-  color: #ddd;
-  margin: 6px 0;
-}
-
-/* EFECTO TARJETAS */
+/* TARJETAS MÁS PREMIUM */
 .card {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
 }
 
 .card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.22);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.card img {
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.card:hover img {
+  transform: scale(1.08);
+  filter: brightness(1.1);
+}
+
+/* GALERÍA */
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
 }
 
 .gallery-item img {
@@ -201,9 +144,59 @@ nav {
 
 .gallery-item:hover img {
   transform: scale(1.08);
-  box-shadow: 0px 10px 20px rgba(0,0,0,0.3);
+  box-shadow: 0px 10px 25px rgba(0,0,0,0.3);
 }
 
+/* CTA */
+.cta {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #0066ff, #00c3ff);
+  color: white;
+}
+
+/* TESTIMONIOS */
+.testimonials {
+  text-align: center;
+  padding: 60px 20px;
+  background: #0d0f14;
+  color: #ddd;
+}
+
+.testimonial-box {
+  background: #1a1f2c;
+  padding: 25px;
+  margin: 20px auto;
+  max-width: 600px;
+  border-radius: 20px;
+  transition: 0.3s ease;
+}
+
+.testimonial-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+
+/* SECCIÓN CONFIANZA */
+.trust {
+  text-align: center;
+  padding: 60px 20px;
+  background: #0d0f14;
+  color: white;
+}
+
+.trust h2 {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.trust p {
+  font-size: 17px;
+  color: #ccc;
+  margin: 8px 0;
+}
+
+/* WHATSAPP MÁS LLAMATIVO */
 .whatsapp-float {
   position: fixed;
   bottom: 20px;
@@ -211,61 +204,28 @@ nav {
   background: #25D366;
   font-size: 28px;
   color: white;
-  padding: 16px;
+  padding: 18px;
   border-radius: 50%;
   text-decoration: none;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
   transition: 0.3s ease;
+  animation: pulse 2s infinite ease-in-out;
 }
 
 .whatsapp-float:hover {
-  transform: scale(1.12);
+  transform: scale(1.15);
 }
 
-.testimonials {
-  text-align: center;
-  padding: 40px 20px;
-  font-size: 16px;
-  color: #ddd;
-}
-
-.hero-title {
-  font-size: 48px;
-  font-weight: 800;
-  text-align:center;
-}
-
-.hero-subtitle {
-  font-size: 20px;
-  color:#ccc;
-  text-align:center;
-  margin-top:10px;
-}
-
-.big-cta {
-  display:block;
-  text-align:center;
-  margin:30px auto;
-  font-size:20px;
-  padding:15px 30px;
-}
-
-/* -------- ANIMACIONES VISUALES -------- */
-
-/* fade general */
+/* ANIMACIONES */
 .fade {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
+
 .fade.visible {
   opacity: 1;
   transform: translateY(0);
-}
-
-/* Pulse suave WhatsApp */
-.whatsapp-float {
-  animation: pulse 2s infinite ease-in-out;
 }
 
 @keyframes pulse {
@@ -274,18 +234,32 @@ nav {
   100% { transform: scale(1); }
 }
 
-/* Hover colores vibrante */
-.card img {
-  transition: transform 0.4s ease, filter 0.4s ease;
-}
-.card:hover img {
-  transform: scale(1.08);
-  filter: brightness(1.1);
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-/* Testimonios más suaves */
-.testimonial-box {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-} 
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero-text h2 {
+    font-size: 34px;
+  }
+
+  .hero-text p {
+    font-size: 16px;
+  }
+
+  .logo-box img {
+    height: 65px;
+  }
+
+  .grid {
+    padding: 30px;
+  }
+}
