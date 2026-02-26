@@ -266,3 +266,19 @@ footer{
  -webkit-background-clip:text;
  color:transparent;
 }
+
+.price-box{
+ margin-top:25px;
+ font-size:22px;
+}
+
+.price-box span{
+ color:#ccc;
+ font-size:14px;
+}
+
+.urgency{
+ margin-top:15px;
+ font-size:14px;
+ color:#00e0ff;
+}
