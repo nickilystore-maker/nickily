@@ -364,3 +364,41 @@ footer{
  font-size:34px;
  margin-bottom:15px;
 }
+
+/* ===== HERO MEJORADO MARCA GRANDE ===== */
+
+.hero p{
+ font-size:22px;
+ margin-top:20px;
+ color:#e5e5e5;
+ font-weight:500;
+}
+
+.price-box{
+ margin-top:30px;
+ font-size:26px;
+ background:rgba(0,224,255,0.08);
+ border:1px solid rgba(0,224,255,0.25);
+ padding:20px 35px;
+ display:inline-block;
+ border-radius:20px;
+ box-shadow:0 0 40px rgba(0,224,255,0.15);
+}
+
+.price-box strong{
+ font-size:30px;
+ display:block;
+ margin-bottom:5px;
+}
+
+.price-box span{
+ font-size:16px;
+ color:#ccc;
+}
+
+.urgency{
+ margin-top:25px;
+ font-size:16px;
+ color:#00e0ff;
+ letter-spacing:1px;
+}
