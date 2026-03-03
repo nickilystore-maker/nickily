@@ -402,3 +402,24 @@ footer{
  color:#00e0ff;
  letter-spacing:1px;
 }
+
+/* ===== ANIMACIONES SUAVES ===== */
+
+.hero,
+.grid,
+.video-product,
+.why-nickily,
+.process,
+.testimonials,
+.final-cta{
+ animation:fadeUp 0.8s ease forwards;
+ opacity:0;
+ transform:translateY(30px);
+}
+
+@keyframes fadeUp{
+ to{
+  opacity:1;
+  transform:translateY(0);
+ }
+}
