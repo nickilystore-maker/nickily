@@ -404,3 +404,8 @@ footer{
  50%{ transform:scale(1.05);}
  100%{ transform:scale(1);}
 }
+
+<div class="personalizar-title">
+  <h1>Crea tu diseño único</h1>
+  <p>Elige el color, la talla y dinos el anime que quieres 🔥</p>
+</div>
