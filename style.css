@@ -425,3 +425,45 @@ footer{
  font-size:17px;
  opacity:0.85;
 }
+
+/* ============================= */
+/* SELECTOR VISUAL DE COLORES */
+/* ============================= */
+
+.color-options{
+ display:flex;
+ flex-wrap:wrap;
+ gap:15px;
+ margin-bottom:25px;
+}
+
+.color-circle{
+ width:38px;
+ height:38px;
+ border-radius:50%;
+ cursor:pointer;
+ border:3px solid transparent;
+ transition:0.3s ease;
+}
+
+.color-circle:hover{
+ transform:scale(1.1);
+}
+
+.color-circle.active{
+ border:3px solid #00e0ff;
+ box-shadow:0 0 15px rgba(0,224,255,0.8);
+}
+
+/* COLORES */
+
+.blanco{ background:#ffffff; }
+.rosa{ background:#ff8acb; }
+.cafe{ background:#6b3e26; }
+.negro{ background:#000000; }
+.rojo{ background:#c40000; }
+.azul{ background:#005eff; }
+.verde{ background:#00a651; }
+.mostaza{ background:#d4a017; }
+.gris{ background:#7a7a7a; }
+.morado{ background:#6a0dad; }
