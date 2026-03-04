@@ -292,6 +292,36 @@ textarea{
 }
 
 /* ============================= */
+/* FIX SELECT COLOR */
+/* ============================= */
+
+select{
+ appearance:none;
+ -webkit-appearance:none;
+ -moz-appearance:none;
+ background:rgba(255,255,255,0.08);
+ color:white;
+ cursor:pointer;
+}
+
+/* Flecha personalizada */
+
+select{
+ background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='20' viewBox='0 0 24 24' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+ background-repeat:no-repeat;
+ background-position:right 15px center;
+ background-size:18px;
+ padding-right:45px;
+}
+
+/* Opciones */
+
+select option{
+ background:#0d0f14;
+ color:white;
+}
+
+/* ============================= */
 /* FINAL CTA */
 /* ============================= */
 
