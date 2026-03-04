@@ -68,17 +68,24 @@ const circles = document.querySelectorAll('.color-circle');
 /* FUNCION PARA CAMBIAR COLOR */
 
 function cambiarColor(color){
+
+  imagen.style.transform = "scale(0.95)";
   imagen.style.opacity = 0;
 
   setTimeout(()=>{
     imagen.src = "images/producto/" + color + ".jpg";
     imagen.style.opacity = 1;
+    imagen.style.transform = "scale(1)";
   },200);
 
   colorInput.value = color;
 
   circles.forEach(c => c.classList.remove('active'));
-  document.querySelector(`[data-color="${color}"]`).classList.add('active');
+
+  const activo = document.querySelector(`[data-color="${color}"]`);
+  if(activo){
+    activo.classList.add('active');
+  }
 }
 
 /* CLICK EN CIRCULOS */
