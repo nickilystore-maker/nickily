@@ -467,3 +467,8 @@ footer{
 .mostaza{ background:#d4a017; }
 .gris{ background:#7a7a7a; }
 .morado{ background:#6a0dad; }
+
+.blanco{
+ background:#ffffff;
+ border:2px solid #ccc;
+}
