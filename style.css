@@ -482,3 +482,31 @@ footer{
  color:#00e0ff;
  font-weight:bold;
 }
+
+.section-title{
+ text-align:center;
+ font-size:2.6rem;
+ font-weight:900;
+ margin-bottom:15px;
+}
+
+.section-sub{
+ text-align:center;
+ font-size:17px;
+ opacity:0.85;
+ margin-bottom:40px;
+}
+
+.section-title{
+ text-align:center;
+ font-size:2.6rem;
+ font-weight:900;
+ margin-bottom:15px;
+}
+
+.section-sub{
+ text-align:center;
+ font-size:17px;
+ opacity:0.85;
+ margin-bottom:40px;
+}
