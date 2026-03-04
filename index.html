@@ -4,113 +4,157 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nickily | Busos Personalizados</title>
-<link rel="stylesheet" href="style.css?v=50">
+<link rel="stylesheet" href="style.css?v=60">
+<link rel="icon" type="image/png" href="favicon.png">
 </head>
 
 <body>
 
 <div class="urgency-bar">
-🔥 Diseños personalizados bajo pedido – Producción limitada cada semana
+🔥 Producción personalizada limitada cada semana
 </div>
 
 <header>
-  <div class="logo-box">
-    <img src="logo.png" alt="Nickily Logo">
-  </div>
-  <a href="personalizar.html?color=negro" class="btn small-cta">Personalizar</a>
+ <div class="logo-box">
+  <img src="logo.png" alt="Nickily Logo">
+ </div>
+ <a href="personalizar.html?color=negro" class="btn">Personalizar</a>
 </header>
 
+<!-- HERO -->
 <section class="hero">
-  <h1>Convierte tu anime favorito en un buso único 🔥</h1>
-  <p class="price">Precio fijo: <strong>$90.000</strong></p>
-  <p class="subtitle">Diseño exclusivo • No repetimos modelos</p>
+
+  <h1 class="hero-title">
+    Convierte tu anime favorito<br>
+    en un buso único 🔥
+  </h1>
+
+  <p class="hero-subtitle">
+    Diseño 100% personalizado por <strong>$90.000</strong>
+  </p>
+
+  <p class="limit">
+    No repetimos diseños sin autorización
+  </p>
 
   <a href="personalizar.html?color=negro" class="btn big-cta">
-    Crear mi diseño ahora
+    🔥 Crear mi diseño ahora
   </a>
+
 </section>
 
-<!-- COLORES -->
-<section class="colores">
-  <h2>Elige tu color</h2>
+<!-- COLORES (COMPACTO PERO VISIBLE) -->
+<section id="colores">
 
-  <div class="color-grid">
+ <h2 class="section-title">Elige tu color base</h2>
 
-    <a href="personalizar.html?color=blanco"><img src="images/catalogo/blanco.jpg"></a>
-    <a href="personalizar.html?color=negro"><img src="images/catalogo/negro.jpg"></a>
-    <a href="personalizar.html?color=rojo"><img src="images/catalogo/rojo.jpg"></a>
-    <a href="personalizar.html?color=rosa"><img src="images/catalogo/rosa.jpg"></a>
-    <a href="personalizar.html?color=azul"><img src="images/catalogo/azul.jpg"></a>
-    <a href="personalizar.html?color=verde"><img src="images/catalogo/verde.jpg"></a>
-    <a href="personalizar.html?color=mostaza"><img src="images/catalogo/mostaza.jpg"></a>
-    <a href="personalizar.html?color=gris"><img src="images/catalogo/gris.jpg"></a>
+ <div class="grid">
 
+  <div class="card">
+   <img src="images/catalogo/blanco.jpg">
+   <div class="card-content">
+    <a href="personalizar.html?color=blanco" class="btn">Blanco</a>
+   </div>
   </div>
+
+  <div class="card">
+   <img src="images/catalogo/negro.jpg">
+   <div class="card-content">
+    <a href="personalizar.html?color=negro" class="btn">Negro</a>
+   </div>
+  </div>
+
+  <div class="card">
+   <img src="images/catalogo/rosa.jpg">
+   <div class="card-content">
+    <a href="personalizar.html?color=rosa" class="btn">Rosa</a>
+   </div>
+  </div>
+
+  <div class="card">
+   <img src="images/catalogo/azul.jpg">
+   <div class="card-content">
+    <a href="personalizar.html?color=azul" class="btn">Azul</a>
+   </div>
+  </div>
+
+ </div>
+
 </section>
 
 <!-- VIDEO -->
-<section class="video-section">
-  <h2>Míralo en 360°</h2>
-  <div class="video-box">
-    <video controls autoplay muted loop>
-      <source src="video360.mp4" type="video/mp4">
-    </video>
-  </div>
+<section class="video-product">
+  <h2 class="section-title">Míralo en 360°</h2>
+  <video autoplay muted loop playsinline preload="metadata">
+    <source src="videos/buzo360.mp4" type="video/mp4">
+  </video>
 </section>
 
 <!-- TRABAJOS -->
 <section class="trabajos">
-  <h2>Trabajos realizados</h2>
+
+  <h2 class="section-title">Trabajos realizados</h2>
+
   <div class="trabajos-grid">
-    <img src="trabajos/1.jpg">
-    <img src="trabajos/2.jpg">
-    <img src="trabajos/3.jpg">
-    <img src="trabajos/4.jpg">
+    <img src="trabajos/trabajo1.jpg">
+    <img src="trabajos/trabajo2.jpg">
+    <img src="trabajos/trabajo3.jpg">
+    <img src="trabajos/trabajo4.jpg">
+    <img src="trabajos/trabajo5.jpg">
+    <img src="trabajos/trabajo6.jpg">
+    <img src="trabajos/trabajo7.jpg">
+    <img src="trabajos/trabajo8.jpg">
   </div>
+
 </section>
 
 <!-- PROCESO -->
-<section class="proceso">
-  <h2>Así funciona</h2>
+<section class="process">
 
-  <div class="proceso-grid">
-    <div class="card">
-      <h3>1️⃣ Elige color</h3>
+  <h2>Así personalizas tu buso</h2>
+
+  <div class="process-steps">
+
+    <div>
+      <h3>1️⃣ Elige el color</h3>
       <p>Selecciona el tono que más te guste.</p>
     </div>
 
-    <div class="card">
+    <div>
       <h3>2️⃣ Dinos tu anime</h3>
-      <p>Escribe el diseño que quieres.</p>
+      <p>Escribe tu diseño ideal.</p>
     </div>
 
-    <div class="card">
+    <div>
       <h3>3️⃣ Lo producimos</h3>
       <p>Te contactamos y lo hacemos realidad.</p>
     </div>
+
   </div>
 
   <a href="personalizar.html?color=negro" class="btn big-cta">
-    Personalizar mi buso
+    Personalizar ahora
   </a>
+
 </section>
 
+<!-- CTA FINAL -->
 <section class="final-cta">
-  <h2>No lo pienses más 🔥</h2>
-  <p>Diseño único por solo <strong>$90.000</strong></p>
+
+  <h2>Haz tu diseño hoy por $90.000 🔥</h2>
+  <p>Producción limitada semanal.</p>
 
   <a href="personalizar.html?color=negro" class="btn big-cta">
     Quiero el mío ahora
   </a>
+
 </section>
 
-<a href="https://wa.me/573053471863" class="whatsapp-float" target="_blank">
-💬
-</a>
-
 <footer>
-© 2026 Nickily – Busos personalizados
+ © 2026 Nickily | Todos los derechos reservados
 </footer>
+
+<a href="https://wa.me/573053471863" class="whatsapp-float">💬</a>
 
 </body>
 </html>
