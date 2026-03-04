@@ -22,19 +22,23 @@
 
 <div class="form-box">
 
- <label>Color</label>
- <select id="colorSelect">
-  <option value="blanco">Blanco</option>
-  <option value="rosa">Rosa</option>
-  <option value="cafe">Café</option>
-  <option value="negro">Negro</option>
-  <option value="rojo">Rojo</option>
-  <option value="azul">Azul</option>
-  <option value="verde">Verde</option>
-  <option value="mostaza">Mostaza</option>
-  <option value="gris">Gris</option>
-  <option value="morado">Morado</option>
- </select>
+<label>Color</label>
+<div class="color-options" id="colorOptions">
+
+  <div class="color-circle blanco" data-color="blanco"></div>
+  <div class="color-circle rosa" data-color="rosa"></div>
+  <div class="color-circle cafe" data-color="cafe"></div>
+  <div class="color-circle negro" data-color="negro"></div>
+  <div class="color-circle rojo" data-color="rojo"></div>
+  <div class="color-circle azul" data-color="azul"></div>
+  <div class="color-circle verde" data-color="verde"></div>
+  <div class="color-circle mostaza" data-color="mostaza"></div>
+  <div class="color-circle gris" data-color="gris"></div>
+  <div class="color-circle morado" data-color="morado"></div>
+
+</div>
+
+<input type="hidden" id="colorSelect" value="negro">
 
  <label>Talla</label>
  <select id="talla">
