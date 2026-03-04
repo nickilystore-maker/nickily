@@ -87,7 +87,7 @@ header h1{
 }
 
 .social-proof{
- margin-top:20px;
+ margin-top:15px;
  font-size:19px;
  color:#00e0ff;
  font-weight:bold;
@@ -154,6 +154,13 @@ header h1{
  padding:20px 55px;
  margin-top:35px;
  box-shadow:0 0 45px rgba(0,224,255,0.6);
+ animation:breathe 3s ease-in-out infinite;
+}
+
+@keyframes breathe{
+ 0%{ transform:scale(1);}
+ 50%{ transform:scale(1.05);}
+ 100%{ transform:scale(1);}
 }
 
 /* ============================= */
@@ -240,7 +247,7 @@ header h1{
  width:100%;
  max-height:500px;
  object-fit:contain;
- transition:0.3s ease;
+ transition:0.4s ease;
 }
 
 .form-box{
@@ -291,9 +298,7 @@ textarea{
  min-height:120px;
 }
 
-/* ============================= */
-/* FIX SELECT COLOR */
-/* ============================= */
+/* SELECT PERSONALIZADO */
 
 select{
  appearance:none;
@@ -302,11 +307,6 @@ select{
  background:rgba(255,255,255,0.08);
  color:white;
  cursor:pointer;
-}
-
-/* Flecha personalizada */
-
-select{
  background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='20' viewBox='0 0 24 24' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
  background-repeat:no-repeat;
  background-position:right 15px center;
@@ -314,11 +314,102 @@ select{
  padding-right:45px;
 }
 
-/* Opciones */
-
 select option{
  background:#0d0f14;
  color:white;
+}
+
+/* ============================= */
+/* SELECTOR VISUAL COLORES */
+/* ============================= */
+
+.color-options{
+ display:flex;
+ flex-wrap:wrap;
+ gap:15px;
+ margin-bottom:25px;
+}
+
+.color-circle{
+ width:38px;
+ height:38px;
+ border-radius:50%;
+ cursor:pointer;
+ border:3px solid transparent;
+ transition:0.3s ease;
+}
+
+.color-circle:hover{
+ transform:scale(1.1);
+}
+
+.color-circle.active{
+ border:3px solid #00e0ff;
+ box-shadow:0 0 15px rgba(0,224,255,0.8);
+}
+
+/* COLORES */
+
+.blanco{ background:#ffffff; border:2px solid #ccc; }
+.rosa{ background:#ff8acb; }
+.cafe{ background:#6b3e26; }
+.negro{ background:#000000; }
+.rojo{ background:#c40000; }
+.azul{ background:#005eff; }
+.verde{ background:#00a651; }
+.mostaza{ background:#d4a017; }
+.gris{ background:#7a7a7a; }
+.morado{ background:#6a0dad; }
+
+/* ============================= */
+/* TITULOS GENERALES */
+/* ============================= */
+
+.section-title{
+ text-align:center;
+ font-size:2.6rem;
+ font-weight:900;
+ margin-bottom:15px;
+}
+
+.section-sub{
+ text-align:center;
+ font-size:17px;
+ opacity:0.85;
+ margin-bottom:40px;
+}
+
+/* ============================= */
+/* TRABAJOS REALIZADOS */
+/* ============================= */
+
+.trabajos{
+ padding:100px 8%;
+ text-align:center;
+}
+
+.trabajos-grid{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+ gap:25px;
+ margin-top:40px;
+}
+
+.trabajos-grid img{
+ width:100%;
+ height:280px;
+ object-fit:cover;
+ border-radius:20px;
+ transition:0.4s ease;
+ backdrop-filter: blur(10px);
+ background:rgba(255,255,255,0.05);
+ border:1px solid rgba(255,255,255,0.15);
+ box-shadow:0 10px 30px rgba(0,224,255,0.15);
+}
+
+.trabajos-grid img:hover{
+ transform:scale(1.05);
+ box-shadow:0 15px 40px rgba(0,224,255,0.35);
 }
 
 /* ============================= */
@@ -333,6 +424,26 @@ select option{
 .final-cta h2{
  font-size:2.5rem;
  margin-bottom:20px;
+}
+
+/* ============================= */
+/* URGENCY BAR */
+/* ============================= */
+
+.urgency-bar{
+ background:#ff4d4d;
+ text-align:center;
+ padding:12px;
+ font-weight:bold;
+ font-size:15px;
+ letter-spacing:1px;
+ animation:pulseUrgency 2s infinite;
+}
+
+@keyframes pulseUrgency{
+ 0%{opacity:1;}
+ 50%{opacity:0.8;}
+ 100%{opacity:1;}
 }
 
 /* ============================= */
@@ -377,136 +488,4 @@ footer{
   font-size:3rem;
  }
 
-}
-
-.urgency-bar{
- background:#ff4d4d;
- text-align:center;
- padding:12px;
- font-weight:bold;
- font-size:15px;
- letter-spacing:1px;
- animation:pulseUrgency 2s infinite;
-}
-
-@keyframes pulseUrgency{
- 0%{opacity:1;}
- 50%{opacity:0.8;}
- 100%{opacity:1;}
-}
-
-.big-cta{
- animation: breathe 3s ease-in-out infinite;
-}
-
-@keyframes breathe{
- 0%{ transform:scale(1);}
- 50%{ transform:scale(1.05);}
- 100%{ transform:scale(1);}
-}
-
-/* TITULO PERSONALIZAR */
-.personalizar-title{
- text-align:center;
- margin-bottom:50px;
-}
-
-.personalizar-title h1{
- font-size:38px;
- font-weight:900;
- background: linear-gradient(90deg, #00e0ff, #00ffa3);
- -webkit-background-clip:text;
- color:transparent;
- letter-spacing:1px;
- margin-bottom:10px;
-}
-
-.personalizar-title p{
- font-size:17px;
- opacity:0.85;
-}
-
-/* ============================= */
-/* SELECTOR VISUAL DE COLORES */
-/* ============================= */
-
-.color-options{
- display:flex;
- flex-wrap:wrap;
- gap:15px;
- margin-bottom:25px;
-}
-
-.color-circle{
- width:38px;
- height:38px;
- border-radius:50%;
- cursor:pointer;
- border:3px solid transparent;
- transition:0.3s ease;
-}
-
-.color-circle:hover{
- transform:scale(1.1);
-}
-
-.color-circle.active{
- border:3px solid #00e0ff;
- box-shadow:0 0 15px rgba(0,224,255,0.8);
-}
-
-/* COLORES */
-
-.blanco{ background:#ffffff; }
-.rosa{ background:#ff8acb; }
-.cafe{ background:#6b3e26; }
-.negro{ background:#000000; }
-.rojo{ background:#c40000; }
-.azul{ background:#005eff; }
-.verde{ background:#00a651; }
-.mostaza{ background:#d4a017; }
-.gris{ background:#7a7a7a; }
-.morado{ background:#6a0dad; }
-
-.blanco{
- background:#ffffff;
- border:2px solid #ccc;
-}
-
-.product-image img{
- transition:0.4s ease;
-}
-
-.social-proof{
- margin-top:15px;
- color:#00e0ff;
- font-weight:bold;
-}
-
-.section-title{
- text-align:center;
- font-size:2.6rem;
- font-weight:900;
- margin-bottom:15px;
-}
-
-.section-sub{
- text-align:center;
- font-size:17px;
- opacity:0.85;
- margin-bottom:40px;
-}
-
-.section-title{
- text-align:center;
- font-size:2.6rem;
- font-weight:900;
- margin-bottom:15px;
-}
-
-.section-sub{
- text-align:center;
- font-size:17px;
- opacity:0.85;
- margin-bottom:40px;
 }
