@@ -390,3 +390,68 @@ button[type="submit"]:hover {
   transform: translateY(-4px);
   box-shadow: 0 15px 45px rgba(0,224,255,0.40);
 }
+
+/* ============================= */
+/* ANIMACIÓN ENTRADA SUAVE */
+/* ============================= */
+
+.product-image,
+.form-box {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+.form-box {
+  animation-delay: 0.2s;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============================= */
+/* BOTÓN MICRO PULSO PREMIUM */
+/* ============================= */
+
+button[type="submit"],
+.form-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+button[type="submit"]::after,
+.form-btn::after {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background: radial-gradient(circle, rgba(0,224,255,0.4) 0%, transparent 70%);
+  top: -10%;
+  left: -10%;
+  opacity: 0;
+  animation: pulseGlow 2.5s infinite;
+}
+
+@keyframes pulseGlow {
+  0% { opacity: 0; transform: scale(0.9); }
+  50% { opacity: 0.4; transform: scale(1); }
+  100% { opacity: 0; transform: scale(1.1); }
+}
+
+/* ============================= */
+/* GLOW SUTIL EN TÍTULOS */
+/* ============================= */
+
+.form-box h2,
+.product-image h2 {
+  transition: 0.3s ease;
+}
+
+.form-box h2:hover,
+.product-image h2:hover {
+  text-shadow: 0 0 20px rgba(0,224,255,0.8);
+}
