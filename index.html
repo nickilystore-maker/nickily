@@ -266,6 +266,26 @@ Mira cómo se ve en 360° 🔥
 let cupos = Math.floor(Math.random() * 5) + 4;
 document.getElementById("cupos").textContent = cupos;
 </script> 
+
+<script>
+const elements = document.querySelectorAll('.card, .why-card, .testimonial-card');
+
+const observer = new IntersectionObserver(entries => {
+ entries.forEach(entry => {
+   if(entry.isIntersecting){
+     entry.target.style.opacity = "1";
+     entry.target.style.transform = "translateY(0)";
+   }
+ });
+});
+
+elements.forEach(el=>{
+ el.style.opacity="0";
+ el.style.transform="translateY(40px)";
+ el.style.transition="0.6s ease";
+ observer.observe(el);
+});
+</script>
  
 </body>
 </html>
