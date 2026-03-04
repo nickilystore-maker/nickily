@@ -405,7 +405,23 @@ footer{
  100%{ transform:scale(1);}
 }
 
-<div class="personalizar-title">
-  <h1>Crea tu diseño único</h1>
-  <p>Elige el color, la talla y dinos el anime que quieres 🔥</p>
-</div>
+/* TITULO PERSONALIZAR */
+.personalizar-title{
+ text-align:center;
+ margin-bottom:50px;
+}
+
+.personalizar-title h1{
+ font-size:38px;
+ font-weight:900;
+ background: linear-gradient(90deg, #00e0ff, #00ffa3);
+ -webkit-background-clip:text;
+ color:transparent;
+ letter-spacing:1px;
+ margin-bottom:10px;
+}
+
+.personalizar-title p{
+ font-size:17px;
+ opacity:0.85;
+}
