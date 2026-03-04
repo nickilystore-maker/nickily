@@ -62,28 +62,54 @@ const params = new URLSearchParams(window.location.search);
 const colorURL = params.get('color');
 
 const imagen = document.getElementById('imagenProducto');
-const selectColor = document.getElementById('colorSelect');
 
-if(colorURL){
- imagen.src = "images/producto/" + colorURL + ".jpg";
- selectColor.value = colorURL;
-}else{
- imagen.src = "images/producto/negro.jpg";
+<script>
+
+const params = new URLSearchParams(window.location.search);
+const colorURL = params.get('color');
+
+const imagen = document.getElementById('imagenProducto');
+const colorInput = document.getElementById('colorSelect');
+const circles = document.querySelectorAll('.color-circle');
+
+/* FUNCION PARA CAMBIAR COLOR */
+
+function cambiarColor(color){
+  imagen.style.opacity = 0;
+
+  setTimeout(()=>{
+    imagen.src = "images/producto/" + color + ".jpg";
+    imagen.style.opacity = 1;
+  },200);
+
+  colorInput.value = color;
+
+  circles.forEach(c => c.classList.remove('active'));
+  document.querySelector(`[data-color="${color}"]`).classList.add('active');
 }
 
-/* Cambio de imagen */
-selectColor.addEventListener("change", function(){
- imagen.style.opacity = 0;
+/* CLICK EN CIRCULOS */
 
- setTimeout(()=>{
-  imagen.src = "images/producto/" + this.value + ".jpg";
-  imagen.style.opacity = 1;
- },200);
+circles.forEach(circle=>{
+  circle.addEventListener('click', function(){
+    const color = this.getAttribute('data-color');
+    cambiarColor(color);
+  });
 });
+
+/* SI VIENE COLOR DESDE URL */
+
+if(colorURL){
+  cambiarColor(colorURL);
+}else{
+  cambiarColor("negro");
+}
+
+/* ENVÍO WHATSAPP */
 
 function enviarWhatsApp(){
 
- const colorElegido = selectColor.value;
+ const colorElegido = colorInput.value;
  const talla = document.getElementById("talla").value;
  const diseno = document.getElementById("diseno").value.trim();
 
@@ -105,7 +131,8 @@ Diseño: ${diseno}`;
  window.open(url, "_blank");
 }
 
-</script>
+</script>    
+
 
 </body>
 </html> 
