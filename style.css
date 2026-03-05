@@ -489,3 +489,18 @@ footer{
  }
 
 }
+
+h1, h2, h3 {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.small-text {
+  font-size: 16px;
+}
